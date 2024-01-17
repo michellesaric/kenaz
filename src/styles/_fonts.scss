@@ -1,0 +1,35 @@
+@mixin BitterRegular($color, $fontSize, $lineHeight) {
+  color: $color;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: "Bitter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin BitterBold($color, $fontSize, $lineHeight) {
+  color: $color;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: "Bitter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin ValeraRound($color, $fontSize, $lineHeight) {
+  color: $color;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: "Valera Round", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin Valera($color, $fontSize, $lineHeight) {
+  color: $color;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: "Valera", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
