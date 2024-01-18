@@ -6,7 +6,7 @@
 
   .footer__wrapper {
     width: 942px;
-    display: flex;
+    @include FlexSpaceBetween;
 
     .footer__column {
       width: 303px;

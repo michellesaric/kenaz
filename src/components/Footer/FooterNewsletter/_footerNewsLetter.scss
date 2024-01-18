@@ -1,0 +1,32 @@
+.footer-newsletter {
+  margin-bottom: 69px;
+
+  .footer-newsletter__title {
+    @include BitterBold($textLightGray, 24px, normal);
+    margin-bottom: 25px;
+  }
+
+  .footer-newsletter__text {
+    @include BitterRegular($textGray, 14px, 20px);
+    margin-bottom: 25px;
+  }
+
+  .footer-newsletter__subscribe {
+    display: flex;
+
+    .footer-newsletter__subscribe-input {
+      padding: 18px 0px 18px 21px;
+      border: none;
+      background-color: $backgroundGray;
+      @include VarelaRound($gray, 16px, normal);
+    }
+
+    .footer-newsletter__subscribe-button {
+      border: none;
+      cursor: pointer;
+      padding: 18px 21px;
+      background-color: $backgroundPurple;
+      @include VarelaRound($textLightGray, 16px, normal);
+    }
+  }
+}
