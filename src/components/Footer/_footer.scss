@@ -2,7 +2,7 @@
   width: 100%;
   background-color: $black;
   padding: 61px 0px 219px;
-  @include FlexCenterVertical;
+  @include FlexCenterVerticalColumn;
 
   .footer__wrapper {
     width: 942px;
@@ -10,6 +10,22 @@
 
     .footer__column {
       width: 303px;
+    }
+  }
+
+  .footer-copyright {
+    width: 100%;
+    border-top: 1px solid $backgroundGray;
+    @include FlexCenterVertical;
+
+    .footer-copyright__wrapper {
+      width: 942px;
+      @include FlexSpaceBetween;
+      padding-top: 18px;
+
+      .footer-copyright__text {
+        @include VarelaRound($gray, 12px, normal);
+      }
     }
   }
 }

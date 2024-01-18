@@ -16,6 +16,16 @@ import FooterTwitterFeed from "./FooterTwitterFeed/footerTwitterFeed.vue";
         <FooterTagsWidgetVue /><FooterTwitterFeed />
       </div>
     </div>
+    <div class="footer-copyright">
+      <div class="footer-copyright__wrapper">
+        <p class="footer-copyright__text">
+          © 2013 - Kenaz Template - Proudly made at Plava tvornica Croatia
+        </p>
+        <p class="footer-copyright__text">
+          Typography - Templates - Contact Form - 404 Page
+        </p>
+      </div>
+    </div>
   </footer>
 </template>
 
