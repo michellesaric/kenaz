@@ -1,0 +1,36 @@
+.footer-posts {
+  margin-bottom: 67px;
+
+  .footer-posts__title {
+    @include BitterBold($white, 24px, normal);
+    margin-bottom: 24px;
+  }
+
+  .footer-posts__post {
+    border-bottom: 1px solid $textGray;
+    padding: 20px 0px;
+    @include FlexSpaceBetween;
+
+    .footer-posts__post-date-comment-wrapper {
+      @include FlexSpaceBetween;
+      margin-right: 14px;
+
+      .footer-posts__post-date,
+      .footer-posts__post-comments {
+        @include VarelaRound($textGray, 10px, normal);
+      }
+    }
+    .footer-posts__post-title {
+      @include BitterBold($textLightGray, 14px, normal);
+    }
+  }
+
+  .footer-posts__post:first-child {
+    padding-top: 0;
+  }
+
+  .footer-posts__post:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
