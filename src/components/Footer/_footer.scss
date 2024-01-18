@@ -1,0 +1,15 @@
+.footer {
+  width: 100%;
+  background-color: $black;
+  padding: 61px 0px 219px;
+  @include FlexCenterVertical;
+
+  .footer__wrapper {
+    width: 942px;
+    display: flex;
+
+    .footer__column {
+      width: 303px;
+    }
+  }
+}

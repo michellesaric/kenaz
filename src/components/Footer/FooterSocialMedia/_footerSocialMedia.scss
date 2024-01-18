@@ -1,0 +1,22 @@
+.footer-social-media {
+  margin-bottom: 69px;
+
+  .footer-social-media__logo {
+    @include FlexCenterHorizontal;
+    margin-bottom: 23px;
+
+    .footer-social-media__logo-text {
+      @include BitterRegular($blue, 29.623px, 51.807px);
+      margin-left: 18px;
+    }
+  }
+
+  .footer-social-media__text {
+    @include BitterRegular($textGray, 14px, 20px);
+    margin-bottom: 23px;
+  }
+
+  .footer-social-media__icons {
+    @include FlexSpaceBetween;
+  }
+}

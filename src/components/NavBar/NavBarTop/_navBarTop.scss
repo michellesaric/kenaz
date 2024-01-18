@@ -9,7 +9,7 @@
 
     .nav-top__logo,
     .nav-top__links {
-      @include FlexCenterHorizonal;
+      @include FlexCenterHorizontal;
 
       .nav-top__logo-text {
         @include BitterRegular($white, 24px, 27px);
