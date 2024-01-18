@@ -4,7 +4,12 @@
       <h2
         v-for="category in categories"
         key="category"
-        :class="['nav-bottom__category', category]"
+        @click="classClick(category)"
+        :class="[
+          'nav-bottom__category',
+          category,
+          { active: activeCategory === category },
+        ]"
       >
         {{ category }}
       </h2>
@@ -19,7 +24,13 @@ export default {
   data() {
     return {
       categories: categories,
+      activeCategory: "news",
     };
+  },
+  methods: {
+    classClick(category) {
+      this.activeCategory = category;
+    },
   },
 };
 </script>

@@ -19,14 +19,15 @@
   justify-content: space-between;
 }
 
-@mixin NavTransition($color) {
+@mixin CategoryTransition($color) {
   background-size: 200% 200%;
   background-image: linear-gradient(to top, $color 50%, transparent 50%);
   transition: background-position 300ms, color 300ms ease,
     border-color 300ms ease;
-}
 
-@mixin NavTranistionHover($color) {
-  background-image: linear-gradient(to top, $color 51%, transparent 50%);
-  background-position: 0 100%;
+  &:hover,
+  &.active {
+    background-image: linear-gradient(to top, $color 51%, transparent 50%);
+    background-position: 0 100%;
+  }
 }

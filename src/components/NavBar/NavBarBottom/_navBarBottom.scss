@@ -11,58 +11,34 @@
       @include BitterBold($white, 18px, normal);
       padding: 15px 20px;
       text-transform: uppercase;
-    }
-    .nav-bottom__category:hover {
-      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
-    // ovo se moglo bolje sigurno, al moram još skužit kako
     .news {
-      border-bottom: 3px solid $newsBlue;
-      @include NavTransition($newsBlue);
-    }
-    .news:hover {
-      @include NavTranistionHover($newsBlue);
+      @include CategoryTransition($newsBlue);
     }
 
     .business {
-      border-bottom: 3px solid $businessOrange;
-      @include NavTransition($businessOrange);
-    }
-    .business:hover {
-      @include NavTranistionHover($businessOrange);
+      @include CategoryTransition($businessOrange);
     }
 
     .sport {
-      border-bottom: 3px solid $sportGreen;
-      @include NavTransition($sportGreen);
-    }
-    .sport:hover {
-      @include NavTranistionHover($sportGreen);
+      @include CategoryTransition($sportGreen);
     }
 
     .life {
-      border-bottom: 3px solid $lifeBlue;
-      @include NavTransition($lifeBlue);
-    }
-    .life:hover {
-      @include NavTranistionHover($lifeBlue);
+      @include CategoryTransition($lifeBlue);
     }
 
     .tech {
-      border-bottom: 3px solid $techYellow;
-      @include NavTransition($techYellow);
-    }
-    .tech:hover {
-      @include NavTranistionHover($techYellow);
+      @include CategoryTransition($techYellow);
     }
 
     .travel {
-      border-bottom: 3px solid $travelBrown;
-      @include NavTransition($travelBrown);
-    }
-    .travel:hover {
-      @include NavTranistionHover($travelBrown);
+      @include CategoryTransition($travelBrown);
     }
   }
 }
