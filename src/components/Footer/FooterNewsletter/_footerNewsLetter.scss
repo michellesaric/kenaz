@@ -16,6 +16,7 @@
 
     .footer-newsletter__subscribe-input {
       padding: 18px 0px 18px 21px;
+      width: 193px;
       border: none;
       background-color: $backgroundGray;
       @include VarelaRound($gray, 16px, normal);

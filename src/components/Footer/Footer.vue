@@ -1,6 +1,7 @@
 <script setup>
 import FooterSocialMedia from "./FooterSocialMedia/FooterSocialMedia.vue";
 import FooterNewsLetter from "./FooterNewsletter/FooterNewsLetter.vue";
+import FooterTagsWidgetVue from "./FooterTagsWidget/FooterTagsWidget.vue";
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import FooterNewsLetter from "./FooterNewsletter/FooterNewsLetter.vue";
     <div class="footer__wrapper">
       <div class="footer__column"><FooterSocialMedia /></div>
       <div class="footer__column"><FooterNewsLetter /></div>
-      <div class="footer__column"></div>
+      <div class="footer__column"><FooterTagsWidgetVue /></div>
     </div>
   </footer>
 </template>
