@@ -1,25 +1,18 @@
 .nav-top__wrapper {
   width: 100%;
   background-color: $black;
-  display: flex;
-  justify-content: center;
+  @include FlexCenterVertical;
 
   .nav-top {
     width: 942px;
-    display: flex;
-    justify-content: space-between;
+    @include FlexSpaceBetween;
 
     .nav-top__logo,
     .nav-top__links {
-      display: flex;
-      align-items: center;
+      @include FlexCenterHorizonal;
 
       .nav-top__logo-text {
         @include BitterRegular($white, 24px, 27px);
-      }
-
-      .nav-top__logo-text:hover {
-        cursor: pointer;
       }
 
       .nav-top__links-text {
@@ -27,13 +20,16 @@
         margin-right: 30px;
       }
 
+      .nav-top__logo-text:hover,
+      .nav-top__links-text:hover {
+        cursor: pointer;
+      }
+
       .nav-top__logo-icon,
       .nav-top__links-search-icon {
         width: 63px;
         height: 53px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include FlexCenter;
       }
 
       .nav-top__logo-icon {
@@ -43,7 +39,7 @@
       .nav-top__logo-icon:hover,
       .nav-top__links-search-icon:hover {
         cursor: pointer;
-        background-color: #303030;
+        background-color: $secondaryBlack;
       }
     }
   }

@@ -18,6 +18,7 @@ export default defineConfig({
           @import "@/styles/_variables.scss"
           @import "@/styles/_fonts.scss"
           @import "@/styles/_global.scss"
+          @import "@/styles/_layout.scss"
         `,
       },
     },
