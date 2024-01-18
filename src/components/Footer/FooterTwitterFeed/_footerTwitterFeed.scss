@@ -1,0 +1,30 @@
+.footer-twitter-feed__title {
+  @include BitterBold($white, 24px, normal);
+  margin-bottom: 20px;
+}
+
+.footer-twitter-feed__tweet {
+  margin-bottom: 29px;
+
+  .footer-twitter-feed__logo-account-wrapper {
+    @include FlexCenterHorizontal;
+    margin-bottom: 11px;
+
+    .footer-twitter-feed__tweet-account {
+      margin-left: 4px;
+      @include BitterRegular($textGray, 14px, 16px);
+
+      .account-name {
+        font-family: "Varela";
+      }
+    }
+  }
+
+  .footer-twitter-feed__tweet-text {
+    @include Varela($textLightGray, 13px, 18px);
+  }
+}
+
+.footer-twitter-feed__tweet:last-child {
+  margin-bottom: 0px;
+}
