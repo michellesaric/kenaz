@@ -11,4 +11,15 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  css: {
+    preprocessorOptions: {
+      sass: {
+        additionalData: `
+          @import "@/styles/_variables.scss"
+          @import "@/styles/_fonts.scss"
+          @import "@/styles/_global.scss"
+        `,
+      },
+    },
+  },
 });

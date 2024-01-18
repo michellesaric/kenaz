@@ -1,5 +1,13 @@
+<script setup>
+import NavBar from "./components/NavBar/NavBar.vue";
+</script>
+
 <template>
   <header>
-    <p>I made my first Vue project !!!</p>
+    <NavBar />
   </header>
 </template>
+
+<style lang="sass">
+@import "./styles/_variables.scss"
+</style>
