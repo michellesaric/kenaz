@@ -16,7 +16,7 @@
   font-weight: 700;
 }
 
-@mixin ValeraRound($color, $fontSize, $lineHeight) {
+@mixin VarelaRound($color, $fontSize, $lineHeight) {
   color: $color;
   font-size: $fontSize;
   line-height: $lineHeight;
@@ -25,7 +25,7 @@
   font-weight: 400;
 }
 
-@mixin Valera($color, $fontSize, $lineHeight) {
+@mixin Varela($color, $fontSize, $lineHeight) {
   color: $color;
   font-size: $fontSize;
   line-height: $lineHeight;
