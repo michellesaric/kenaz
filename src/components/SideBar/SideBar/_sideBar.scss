@@ -1,0 +1,64 @@
+.side-bar {
+  margin-bottom: 28px;
+
+  .side-bar__top {
+    width: 100%;
+    padding: 17px 31px 16px;
+    background-color: $backgroundDarkPurple;
+    @include FlexSpaceBetween;
+
+    .side-bar__top-link {
+      @include VarelaRound($white, 14px, normal);
+      border-bottom: 1px solid $secondaryGray;
+
+      &:hover {
+        cursor: pointer;
+        color: $techYellow;
+        border-bottom: 1px solid $techYellow;
+      }
+    }
+  }
+
+  .side-bar__list {
+    height: 617px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .side-bar__item {
+      background-color: $backgroundPurple;
+      padding: 19px 28px;
+      border-bottom: 2px solid $opacityBlack;
+      @include FlexSpaceBetween;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .side-bar__item-text-content {
+        width: 142px;
+
+        .side-bar__item-icon-comment-wrapper {
+          @include FlexEnd;
+
+          .side-bar__item-comments {
+            @include VarelaRound($secondaryGray, 10px, normal);
+            margin-left: 3px;
+          }
+        }
+
+        .side-bar__item-date {
+          @include VarelaRound($secondaryGray, 10px, normal);
+        }
+
+        .side-bar__item-title {
+          @include BitterBold($white, 14px, normal);
+        }
+      }
+    }
+  }
+}
