@@ -2,6 +2,7 @@
   width: 100%;
   background-color: $black;
   padding: 61px 0px 219px;
+  border-top: 23px solid $backgroundPurple;
   @include FlexCenterVerticalColumn;
 
   .footer__wrapper {

@@ -9,7 +9,7 @@ import TwitterLogoBlue from "../../icons/TwitterLogoBlue.vue";
       <div
         class="footer-twitter-feed__tweet"
         v-for="tweet in tweets"
-        key="tweet.id"
+        :key="tweet.id"
       >
         <div class="footer-twitter-feed__logo-account-wrapper">
           <TwitterLogoBlue />

@@ -5,9 +5,7 @@ import Footer from "./components/Footer/Footer.vue";
 </script>
 
 <template>
-  <header>
-    <NavBar />
-    <HomeView />
-    <Footer />
-  </header>
+  <NavBar />
+  <HomeView />
+  <Footer />
 </template>

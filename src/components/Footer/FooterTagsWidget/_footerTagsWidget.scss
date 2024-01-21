@@ -1,5 +1,5 @@
 .footer-tags-widget {
-  margin-bottom: 69px;
+  margin-bottom: 61px;
 
   .footer-tags-widget__title {
     @include BitterBold($textLightGray, 24px, normal);
@@ -9,6 +9,7 @@
   .footer-tags-widget__tags {
     display: flex;
     flex-wrap: wrap;
+    gap: 2px;
 
     .footer-tags-widget__tag {
       cursor: pointer;
@@ -18,15 +19,6 @@
       margin-bottom: 5px;
       margin-right: 5px;
     }
-
-    .footer-tags-widget__tag:last-child {
-      margin: 0;
-    }
-
-    .footer-tags-widget__tag:nth-child(4) {
-      margin-right: 0;
-    }
-
     .footer-tags-widget__tag:hover {
       background-color: $backgroundPurple;
       color: $textLightGray;

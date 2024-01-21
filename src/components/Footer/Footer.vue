@@ -2,16 +2,19 @@
 import FooterSocialMedia from "./FooterSocialMedia/FooterSocialMedia.vue";
 import FooterNewsLetter from "./FooterNewsletter/FooterNewsLetter.vue";
 import FooterTagsWidgetVue from "./FooterTagsWidget/FooterTagsWidget.vue";
-import FooterFeatured from "./FooterPosts/FooterFeatured.vue";
-import FooterRandom from "./FooterPosts/FooterRandom.vue";
-import FooterTwitterFeed from "./FooterTwitterFeed/footerTwitterFeed.vue";
+import FooterPosts from "./FooterPosts/FooterPosts.vue";
+import FooterTwitterFeed from "./FooterTwitterFeed/FooterTwitterFeed.vue";
 </script>
 
 <template>
   <footer class="footer">
     <div class="footer__wrapper">
-      <div class="footer__column"><FooterSocialMedia /><FooterFeatured /></div>
-      <div class="footer__column"><FooterNewsLetter /><FooterRandom /></div>
+      <div class="footer__column">
+        <FooterSocialMedia /><FooterPosts postTitle="Featured" />
+      </div>
+      <div class="footer__column">
+        <FooterNewsLetter /><FooterPosts postTitle="Random Posts" />
+      </div>
       <div class="footer__column">
         <FooterTagsWidgetVue /><FooterTwitterFeed />
       </div>

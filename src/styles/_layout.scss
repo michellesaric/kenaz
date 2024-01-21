@@ -33,6 +33,7 @@
 }
 
 @mixin CategoryTransition($color) {
+  border-bottom: 4px solid $color;
   background-size: 200% 200%;
   background-image: linear-gradient(to top, $color 50%, transparent 50%);
   transition: background-position 300ms, color 300ms ease,

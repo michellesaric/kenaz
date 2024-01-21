@@ -3,7 +3,7 @@
     <div class="nav-bottom">
       <h2
         v-for="category in categories"
-        key="category"
+        :key="category"
         @click="classClick(category)"
         :class="[
           'nav-bottom__category',
