@@ -34,4 +34,9 @@ import FooterTwitterFeed from "./FooterTwitterFeed/FooterTwitterFeed.vue";
 
 <style lang="sass">
 @import "./_footer.scss"
+@import "./FooterSocialMedia/_footerSocialMedia.scss"
+@import "./FooterNewsletter/_footerNewsletter.scss"
+@import "./FooterTagsWidget/_footerTagsWidget.scss"
+@import "./FooterPosts/_footerPosts.scss"
+@import "./FooterTwitterFeed/_footerTwitterFeed.scss"
 </style>

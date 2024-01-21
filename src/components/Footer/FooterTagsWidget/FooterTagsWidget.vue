@@ -21,7 +21,3 @@ export default {
   },
 };
 </script>
-
-<style lang="sass">
-@import "./_footerTagsWidget.scss"
-</style>

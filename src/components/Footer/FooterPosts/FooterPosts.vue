@@ -34,7 +34,3 @@ export default {
   },
 };
 </script>
-
-<style lang="sass">
-@import "./_footerPosts.scss"
-</style>

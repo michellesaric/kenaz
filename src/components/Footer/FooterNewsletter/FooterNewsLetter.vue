@@ -15,7 +15,3 @@
     </div>
   </div>
 </template>
-
-<style lang="sass">
-@import "./_footerNewsLetter.scss"
-</style>

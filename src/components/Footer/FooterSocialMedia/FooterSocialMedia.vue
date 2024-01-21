@@ -29,7 +29,3 @@ import Skype from "../../icons/Social Media/SkypeBoxIcon.vue";
     </div>
   </div>
 </template>
-
-<style lang="sass">
-@import "./_footerSocialMedia.scss"
-</style>

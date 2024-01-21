@@ -9,3 +9,8 @@ import NavBarBottom from "./NavBarBottom/NavBarBottom.vue";
     <NavBarBottom />
   </nav>
 </template>
+
+<style lang="sass">
+@import "./NavBarTop/_navBarTop.scss"
+@import ./NavBarBottom/_navBarBottom.scss"
+</style>

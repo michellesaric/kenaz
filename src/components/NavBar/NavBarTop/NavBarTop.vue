@@ -23,7 +23,3 @@ import SearchIcon from "../../icons/SearchIconSmall.vue";
     </div>
   </div>
 </template>
-
-<style lang="sass">
-@import "./_navBarTop.scss"
-</style>

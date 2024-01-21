@@ -35,7 +35,3 @@ export default {
   },
 };
 </script>
-
-<style lang="sass">
-@import "./_footerTwitterFeed.scss"
-</style>

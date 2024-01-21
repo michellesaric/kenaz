@@ -9,3 +9,7 @@ import Footer from "./components/Footer/Footer.vue";
   <HomeView />
   <Footer />
 </template>
+
+<style lang="sass">
+@import "./main.scss"
+</style>
