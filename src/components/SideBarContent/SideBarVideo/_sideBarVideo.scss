@@ -1,0 +1,24 @@
+.side-bar-video {
+  background-color: $white;
+  .side-bar-video__title {
+    @include BitterBold($textBlack, 24px, normal);
+    padding: 15px 0px 31px 31px;
+  }
+
+  .side-bar-video__text-content {
+    padding: 17px 46px 26px 32px;
+
+    .side-bar-video__date {
+      @include VarelaRound($textGray, 12px, normal);
+      margin-bottom: 5px;
+    }
+
+    .side-bar-video__text {
+      @include BitterBold($textBlack, 14px, 18px);
+
+      .NASA {
+        line-height: normal;
+      }
+    }
+  }
+}
