@@ -12,5 +12,5 @@ import NavBarBottom from "./NavBarBottom/NavBarBottom.vue";
 
 <style lang="sass">
 @import "./NavBarTop/_navBarTop.scss"
-@import ./NavBarBottom/_navBarBottom.scss"
+@import "./NavBarBottom/_navBarBottom.scss"
 </style>
