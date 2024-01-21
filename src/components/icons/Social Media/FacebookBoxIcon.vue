@@ -1,8 +1,8 @@
 <template>
   <svg
-    width="38"
-    height="38"
-    viewBox="0 0 38 38"
+    :width="svgWidth"
+    :height="svgHeigth"
+    viewBox="0 0 36 36"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -22,8 +22,34 @@
     </g>
     <defs>
       <clipPath id="clip0_2_861">
-        <rect width="38" height="38" fill="white" />
+        <rect width="36" height="36" fill="white" />
       </clipPath>
     </defs>
   </svg>
 </template>
+
+<script>
+import { ref } from "vue";
+
+export default {
+  setup(props) {
+    const svgWidth = ref(props.width || "36");
+    const svgHeight = ref(props.height || "36");
+
+    return {
+      svgWidth,
+      svgHeight,
+    };
+  },
+  props: {
+    width: {
+      type: String,
+      default: null,
+    },
+    height: {
+      type: String,
+      default: null,
+    },
+  },
+};
+</script>
