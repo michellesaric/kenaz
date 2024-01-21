@@ -1,0 +1,7 @@
+.side-bar-banner-container {
+  width: 100%;
+  @include FlexSpaceBetween;
+  background-color: $backgroundLightGray;
+  padding: 20px;
+  margin-bottom: 17px;
+}

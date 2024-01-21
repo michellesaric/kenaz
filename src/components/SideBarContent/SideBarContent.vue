@@ -2,6 +2,7 @@
 import SideBar from "./SideBar/SideBar.vue";
 import SideBarSocial from "./SideBarSocial/SideBarSocial.vue";
 import SideBarVideo from "./SideBarVideo/SideBarVideo.vue";
+import SideBarBannerContainer from "./SideBarBannerContainer/SideBarBannerContainer.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import SideBarVideo from "./SideBarVideo/SideBarVideo.vue";
     <SideBar />
     <SideBarSocial />
     <SideBarVideo />
+    <SideBarBannerContainer />
   </div>
 </template>
 
@@ -17,4 +19,5 @@ import SideBarVideo from "./SideBarVideo/SideBarVideo.vue";
 @import "./SideBar/_sideBar.scss"
 @import "./SideBarSocial/_sideBarSocial.scss"
 @import "./SideBarVideo/_sideBarVideo.scss"
+@import "./SideBarBannerContainer/_sideBarBannerContainer.scss"
 </style>
