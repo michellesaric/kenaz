@@ -31,3 +31,4 @@ import NewsCardSmall from "../components/NewsFeed/NewsCardSmall/NewsCardSmall.vu
     </div>
   </div>
 </template>
+

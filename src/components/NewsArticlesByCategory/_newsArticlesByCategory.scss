@@ -1,0 +1,34 @@
+.news-articles-by-category {
+  width: 100%;
+  background-color: $white;
+  padding: 15px 0px 12px 0px;
+
+  .news-articles-by-category__main-title {
+    @include BitterBold($textBlack, 24px, normal);
+    margin-left: 30px;
+    margin-bottom: 12px;
+  }
+
+  .news-articles-by-category__pagination {
+    padding: 32px 0px 32px 30px;
+    display: flex;
+
+    .news-articles-by-category__pagination-numbers {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background-color: $backgroundLightGray;
+      margin-right: 5px;
+      @include FlexCenter;
+      @include VarelaRound($backgroundPurple, 14px, normal);
+
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        background-color: $backgroundPurple;
+        color: $white;
+      }
+    }
+  }
+}
