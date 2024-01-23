@@ -31,7 +31,3 @@ import NewsCardSmall from "../components/NewsFeed/NewsCardSmall/NewsCardSmall.vu
     </div>
   </div>
 </template>
-
-<style lang="sass">
-@import "./_view.scss"
-</style>

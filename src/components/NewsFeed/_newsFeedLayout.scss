@@ -6,6 +6,7 @@
 
   .news-feed-layout__top {
     @include FlexSpaceBetween;
+    align-items: flex-end;
     margin-bottom: 25px;
 
     .news-feed-layout__title {
@@ -16,6 +17,7 @@
       @include VarelaRound($textBlue, 14px, normal);
       cursor: pointer;
       border-bottom: 1px solid $opacityBlue;
+      padding: 0;
     }
   }
 }
