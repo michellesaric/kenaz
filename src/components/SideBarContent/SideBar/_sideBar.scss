@@ -10,9 +10,9 @@
     .side-bar__top-link {
       @include VarelaRound($white, 14px, normal);
       border-bottom: 1px solid $secondaryGray;
+      cursor: pointer;
 
       &.active {
-        cursor: pointer;
         color: $techYellow;
         border-bottom: 1px solid $techYellow;
       }
