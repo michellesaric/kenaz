@@ -2,4 +2,13 @@
   width: 100%;
   background-color: $backgroundWhite;
   @include FlexCenterVertical;
+
+  .view-main-content {
+    width: 100%;
+    @include FlexSpaceBetween;
+
+    .view-main-content__left {
+      width: 623px;
+    }
+  }
 }
