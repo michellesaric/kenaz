@@ -5,7 +5,7 @@ import SideBarContent from "../components/SideBarContent/SideBarContent.vue";
 
 <template>
   <div class="background">
-    <div><Banner /><SideBarContent /></div>
+    <div><Banner /><SideBarContent /><Banner /></div>
   </div>
 </template>
 
