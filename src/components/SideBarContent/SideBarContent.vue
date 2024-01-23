@@ -23,4 +23,5 @@ import SideBarFacebookFeed from "./SideBarFacebookFeed/SideBarFacebookFeed.vue";
 @import "./SideBarVideo/_sideBarVideo.scss"
 @import "./SideBarBannerContainer/_sideBarBannerContainer.scss"
 @import "./SideBarFacebookFeed/_sideBarFacebookFeed.scss"
+@import "./SideBar/SideBarItem/_sideBarItem.scss"
 </style>

@@ -8,17 +8,17 @@ import YouTubeIcon from "../../icons/Social Media/YouTubeBoxIcon.vue";
   <div class="side-bar-social">
     <h2 class="side-bar-social__title">Social</h2>
     <div class="side-bar-social__item">
-      <FacebookIcon :width="43" :height="43" />
+      <FacebookIcon :width="'43'" :height="'43'" />
       <button class="side-bar-social__item-text">Like</button>
       <h3 class="side-bar-social__item-following">25041 Fans</h3>
     </div>
     <div class="side-bar-social__item">
-      <TwitterIcon :width="43" :height="43" />
+      <TwitterIcon :width="'43'" :height="'43'" />
       <button class="side-bar-social__item-text">Follow</button>
       <h3 class="side-bar-social__item-following">25041 Followers</h3>
     </div>
     <div class="side-bar-social__item">
-      <YouTubeIcon :width="43" :height="43" />
+      <YouTubeIcon :width="'43'" :height="'43'" />
       <button class="side-bar-social__item-text">Subscribe</button>
       <h3 class="side-bar-social__item-following">941 Subscribers</h3>
     </div>

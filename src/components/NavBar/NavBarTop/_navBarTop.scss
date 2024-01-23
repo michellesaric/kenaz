@@ -13,33 +13,34 @@
 
       .nav-top__logo-text {
         @include BitterRegular($white, 24px, 27px);
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .nav-top__links-text {
         @include VarelaRound($white, 14px, 27px);
         margin-right: 30px;
-      }
 
-      .nav-top__logo-text:hover,
-      .nav-top__links-text:hover {
-        cursor: pointer;
+        &:hover {
+          cursor: pointer;
+        }
       }
-
       .nav-top__logo-icon,
       .nav-top__links-search-icon {
         width: 63px;
         height: 53px;
         @include FlexCenter;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $secondaryBlack;
+        }
       }
 
       .nav-top__logo-icon {
         margin-right: 9px;
-      }
-
-      .nav-top__logo-icon:hover,
-      .nav-top__links-search-icon:hover {
-        cursor: pointer;
-        background-color: $secondaryBlack;
       }
     }
   }

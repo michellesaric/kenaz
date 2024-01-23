@@ -22,14 +22,19 @@
   </div>
 </template>
 
-<script scoped>
+<script>
+import { ref } from "vue";
 import { posts } from "./footerPosts";
 
 export default {
   props: ["postTitle"],
-  data() {
+  setup(props) {
+    const postTitle = ref(props.postTitle);
+    const postsData = ref(posts);
+
     return {
-      posts: posts,
+      posts: postsData,
+      postTitle,
     };
   },
 };

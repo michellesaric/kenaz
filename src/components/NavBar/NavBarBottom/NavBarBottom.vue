@@ -17,20 +17,24 @@
   </div>
 </template>
 
-<script scoped>
+<script>
+import { ref } from "vue";
 import { categories } from "./navBarBottom";
 
 export default {
-  data() {
-    return {
-      categories: categories,
-      activeCategory: "news",
+  setup() {
+    const categoriesData = ref(categories);
+    const activeCategory = ref("news");
+
+    const classClick = (category) => {
+      activeCategory.value = category;
     };
-  },
-  methods: {
-    classClick(category) {
-      this.activeCategory = category;
-    },
+
+    return {
+      categories: categoriesData,
+      activeCategory,
+      classClick,
+    };
   },
 };
 </script>

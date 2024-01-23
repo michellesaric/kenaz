@@ -21,24 +21,3 @@
     </div>
   </div>
 </template>
-
-<!-- <script>
-import { ref, onMounted } from "vue";
-
-export default {
-  setup() {
-    const youtubeVideoId = dQw4w9WgXcQ;
-    const youtubeVideo = ref(null);
-    onMounted(() => {
-      console.log(youtubeVideo.value);
-    });
-
-    const youtubeEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}`;
-
-    return {
-      youtubeEmbedUrl,
-      youtubeVideo,
-    };
-  },
-};
-</script> -->

@@ -41,13 +41,20 @@ export default {
       heightValue: props.bannerHeight.replace("px", ""),
     });
 
-    watch(() => {
-      dynamicStyles.width = props.bannerWidth;
-      dynamicStyles.height = props.bannerHeight;
-      dynamicStyles.margin = props.bannerMargin;
-      dynamicStyles.widthValue = props.bannerWidth.replace("px", "");
-      dynamicStyles.heightValue = props.bannerHeight.replace("px", "");
-    });
+    watch(
+      [
+        () => props.bannerWidth,
+        () => props.bannerHeight,
+        () => props.bannerMargin,
+      ],
+      () => {
+        dynamicStyles.width = props.bannerWidth;
+        dynamicStyles.height = props.bannerHeight;
+        dynamicStyles.margin = props.bannerMargin;
+        dynamicStyles.widthValue = props.bannerWidth.replace("px", "");
+        dynamicStyles.heightValue = props.bannerHeight.replace("px", "");
+      }
+    );
 
     return {
       dynamicStyles,

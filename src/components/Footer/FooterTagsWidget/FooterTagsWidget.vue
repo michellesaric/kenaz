@@ -10,13 +10,16 @@
   </div>
 </template>
 
-<script scoped>
+<script>
+import { ref } from "vue";
 import { tags } from "./footerTagsWidget";
 
 export default {
-  data() {
+  setup() {
+    const tagsData = ref(tags);
+
     return {
-      tags: tags,
+      tags: tagsData,
     };
   },
 };

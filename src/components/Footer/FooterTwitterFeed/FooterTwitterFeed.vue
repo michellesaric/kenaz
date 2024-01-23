@@ -24,13 +24,16 @@ import TwitterLogoBlue from "../../icons/TwitterLogoBlue.vue";
   </div>
 </template>
 
-<script scoped>
+<script>
 import { tweets } from "./footerTwitterFeed";
+import { ref } from "vue";
 
 export default {
-  data() {
+  setup() {
+    const tweetsData = ref(tweets);
+
     return {
-      tweets: tweets,
+      tweets: tweetsData,
     };
   },
 };

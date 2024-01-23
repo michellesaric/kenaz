@@ -10,10 +10,10 @@ import FooterTwitterFeed from "./FooterTwitterFeed/FooterTwitterFeed.vue";
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__column">
-        <FooterSocialMedia /><FooterPosts postTitle="Featured" />
+        <FooterSocialMedia /><FooterPosts :postTitle="'Featured'" />
       </div>
       <div class="footer__column">
-        <FooterNewsLetter /><FooterPosts postTitle="Random Posts" />
+        <FooterNewsLetter /><FooterPosts :postTitle="'Random Posts'" />
       </div>
       <div class="footer__column">
         <FooterTagsWidgetVue /><FooterTwitterFeed />

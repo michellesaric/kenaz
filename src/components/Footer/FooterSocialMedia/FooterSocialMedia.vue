@@ -1,5 +1,4 @@
 <script setup>
-import LogoBlue from "../../icons/LogoBlue.vue";
 import Rss from "../../icons/Social Media/RssBoxIcon.vue";
 import Facebook from "../../icons/Social Media/FacebookBoxIcon.vue";
 import Twitter from "../../icons/Social Media/TwitterBoxIcon.vue";
@@ -12,7 +11,7 @@ import Skype from "../../icons/Social Media/SkypeBoxIcon.vue";
 <template>
   <div class="footer-social-media">
     <div class="footer-social-media__logo">
-      <LogoBlue />
+      <img src="../../../assets/images/LogoBlue.png" />
       <h2 class="footer-social-media__logo-text">Kenaz</h2>
     </div>
     <p class="footer-social-media__text">
