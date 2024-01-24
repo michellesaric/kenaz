@@ -1,5 +1,13 @@
 <script setup>
+import { ref } from "vue";
 import NewsArticleByCategory from "./NewsArticleByCategory/NewsArticleByCategory.vue";
+
+const paginationNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+const activeNumber = ref(paginationNumbers[0]);
+
+const classClick = (number) => {
+  activeNumber.value = number;
+};
 </script>
 
 <template>
@@ -21,37 +29,6 @@ import NewsArticleByCategory from "./NewsArticleByCategory/NewsArticleByCategory
     </div>
   </div>
 </template>
-
-<script>
-import { ref } from "vue";
-export default {
-  setup() {
-    const paginationNumbers = [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-    ];
-    const activeNumber = ref(paginationNumbers[0]);
-
-    const classClick = (number) => {
-      activeNumber.value = number;
-    };
-
-    return {
-      paginationNumbers,
-      activeNumber,
-      classClick,
-    };
-  },
-};
-</script>
 
 <style lang="sass">
 @import "./NewsArticleByCategory/_newsArticleByCategory.scss"
