@@ -1,0 +1,46 @@
+.article-comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+  margin-bottom: 26px;
+
+  .article-comment__comment {
+    display: flex;
+
+    .article-comment__comment-image {
+      margin-right: 17px;
+      width: auto;
+      height: 58px;
+    }
+
+    .article-comment__comment-text-content {
+      .article-comment__comment-name-date-link-wrapper {
+        @include FlexSpaceBetween;
+        align-items: flex-end;
+        margin-bottom: 4px;
+
+        .article-comment__comment-name-date-wrapper {
+          display: flex;
+          align-items: flex-end;
+
+          .article-comment__comment-name {
+            @include BitterRegular($backgroundPurple, 18px, 20px);
+            margin-right: 12px;
+          }
+
+          .article-comment__comment-date {
+            @include Varela($textGray, 11px, 20px);
+          }
+        }
+        .article-comment__comment-link {
+          @include VarelaRound($backgroundPurple, 14px, normal);
+        }
+      }
+
+      .article-comment__comment-text {
+        @include Varela($textDarkGray, 13px, 20px);
+      }
+    }
+  }
+}

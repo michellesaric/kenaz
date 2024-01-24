@@ -1,12 +1,12 @@
 <script setup>
 import NavBar from "./components/NavBar/NavBar.vue";
-import CategoryView from "./views/CategoryView.vue";
+import ArticleView from "./views/ArticleView.vue";
 import Footer from "./components/Footer/Footer.vue";
 </script>
 
 <template>
   <NavBar />
-  <CategoryView />
+  <ArticleView />
   <Footer />
 </template>
 
