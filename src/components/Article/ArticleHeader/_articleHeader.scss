@@ -1,0 +1,27 @@
+.article-header {
+  margin-bottom: 7px;
+
+  .article-header__image {
+    width: 940px;
+    height: 588px;
+    background: url(src/assets/images/Slider1/SlideImage5.jpg);
+    background-size: cover;
+    position: relative;
+
+    .article-header__text-content {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      padding: 94px 0px 34px 30px;
+
+      .article-header__date {
+        @include VarelaRound($textSecondaryBlack, 12px, normal);
+        margin-bottom: 5px;
+      }
+
+      .article-header__title {
+        @include BitterBold($textSecondaryBlack, 44px, normal);
+      }
+    }
+  }
+}

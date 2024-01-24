@@ -17,4 +17,5 @@ import Banner from "../Banner/Banner.vue";
 @import "./ArticleAboutAuthor/_articleAboutAuthor.scss"
 @import "./ArticleComments/_articleComments.scss"
 @import "./ArticleComments/ArticleComment/_articleComment.scss"
+@import "./ArticleHeader/_articleHeader.scss"
 </style>
