@@ -13,6 +13,7 @@
       position: absolute;
       bottom: 0;
       padding: 94px 0px 34px 30px;
+      background: url(src/assets/images/ImageShadow.png);
 
       .article-header__date {
         @include VarelaRound($textSecondaryBlack, 12px, normal);
