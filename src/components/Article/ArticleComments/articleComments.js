@@ -1,4 +1,4 @@
-export const comments = [
+export const commentList = [
   {
     id: 1,
     imgUrl: "src/assets/images/UserAvatar.png",

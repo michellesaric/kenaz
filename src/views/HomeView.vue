@@ -1,5 +1,6 @@
 <script setup>
 import Banner from "../components/Banner/Banner.vue";
+import GallerySlider from "@/components/GallerySlider/GallerySlider.vue";
 import SideBarContent from "../components/SideBarContent/SideBarContent.vue";
 import NewsCardBig from "../components/NewsFeed/NewsCardBig/NewsCardBig.vue";
 import NewsCardSmall from "../components/NewsFeed/NewsCardSmall/NewsCardSmall.vue";
@@ -9,6 +10,7 @@ import NewsCardSmall from "../components/NewsFeed/NewsCardSmall/NewsCardSmall.vu
   <div class="background">
     <div>
       <Banner />
+      <GallerySlider />
       <div class="view-main-content">
         <div class="view-main-content__left">
           <NewsCardBig title="News" borderColor="#299ec3" />
@@ -31,4 +33,3 @@ import NewsCardSmall from "../components/NewsFeed/NewsCardSmall/NewsCardSmall.vu
     </div>
   </div>
 </template>
-

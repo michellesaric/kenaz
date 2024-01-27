@@ -1,5 +1,6 @@
 <script setup>
 import Banner from "../components/Banner/Banner.vue";
+import GallerySlider from "../components/GallerySlider/GallerySlider.vue";
 import SideBarContent from "../components/SideBarContent/SideBarContent.vue";
 import NewsArticlesByCategory from "../components/NewsArticlesByCategory/NewsArticlesByCategory.vue";
 </script>
@@ -8,6 +9,7 @@ import NewsArticlesByCategory from "../components/NewsArticlesByCategory/NewsArt
   <div class="background">
     <div>
       <Banner />
+      <GallerySlider />
       <div class="view-main-content">
         <div class="view-main-content__left">
           <NewsArticlesByCategory />

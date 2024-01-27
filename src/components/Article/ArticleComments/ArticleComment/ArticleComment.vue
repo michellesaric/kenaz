@@ -1,40 +1,22 @@
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps(["id", "imgUrl", "userName", "dateTime", "comment"]);
+</script>
+
 <template>
-  <div class="article-comment">
-    <div
-      class="article-comment__comment"
-      v-for="comment in comments"
-      :key="comment.id"
-    >
-      <img class="article-comment__comment-image" :src="comment.imgUrl" />
-      <div class="article-comment__comment-text-content">
-        <div class="article-comment__comment-name-date-link-wrapper">
-          <div class="article-comment__comment-name-date-wrapper">
-            <h3 class="article-comment__comment-name">
-              {{ comment.userName }}
-            </h3>
-            <h3 class="article-comment__comment-date">
-              {{ comment.dateTime }}
-            </h3>
-          </div>
-          <h4 class="article-comment__comment-link">Reply</h4>
-        </div>
-        <p class="article-comment__comment-text">{{ comment.comment }}</p>
+  <img class="article-comment__image" :src="props.imgUrl" />
+  <div class="article-comment__text-content">
+    <div class="article-comment__name-date-link-wrapper">
+      <div class="article-comment__name-date-wrapper">
+        <h3 class="article-comment__name">
+          {{ props.userName }}
+        </h3>
+        <h3 class="article-comment__date">
+          {{ props.dateTime }}
+        </h3>
       </div>
+      <h4 class="article-comment__link">Reply</h4>
     </div>
+    <p class="article-comment__text">{{ props.comment }}</p>
   </div>
 </template>
-
-<script>
-import { ref } from "vue";
-import { comments } from "./aricleComments";
-
-export default {
-  setup() {
-    const commentsData = ref(comments);
-
-    return {
-      comments: commentsData,
-    };
-  },
-};
-</script>
