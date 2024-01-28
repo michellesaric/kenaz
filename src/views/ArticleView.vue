@@ -7,7 +7,7 @@ import ArticleHeader from "../components/Article/ArticleHeader/ArticleHeader.vue
 
 <template>
   <div class="background">
-    <div>
+    <div class="background-center">
       <Banner />
       <ArticleHeader />
       <div class="view-main-content">

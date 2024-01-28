@@ -1,5 +1,5 @@
 <script setup>
-import GallerySlide from "./GallerySlide/GallerySlide.vue";
+import GallerySlide from "./GallerySlide.vue";
 import { ref } from "vue";
 import { galleryContent } from "./gallerySlider";
 import "@splidejs/vue-splide/css";
@@ -26,6 +26,7 @@ const selectedOptions = {
       :options="selectedOptions"
       aria-label="Gallery Images"
     >
+      <div class="custom-wrapper">
       <SplideTrack>
         <SplideSlide v-for="galleryItem in galleryItems" :key="galleryItem.id"
           ><GallerySlide v-bind="galleryItem"
@@ -36,10 +37,7 @@ const selectedOptions = {
         <button class="splide__arrow splide__arrow--prev">Prev</button>
         <button class="splide__arrow splide__arrow--next">Next</button>
       </div>
+      </div>
     </Splide> -->
   </div>
 </template>
-
-<style lang="sass">
-@import "./GallerySlide/_gallerySlide.scss"
-</style>

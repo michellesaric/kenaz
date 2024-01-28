@@ -1,0 +1,16 @@
+@import "./sideBar";
+@import "./sideBarItem";
+@import "./sideBarSocial";
+@import "./sideBarVideo";
+@import "./sideBarBannerContainer";
+@import "./sideBarFacebookFeed";
+
+.side-bar-content {
+  width: 303px;
+}
+
+@media screen and (min-width: 630px) and (max-width: 990px) {
+  .side-bar-content {
+    width: 623px;
+  }
+}

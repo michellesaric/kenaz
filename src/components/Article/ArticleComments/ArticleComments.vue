@@ -19,7 +19,6 @@ const comments = commentsData.value;
         <ArticleComment v-bind="comment" />
       </div>
     </div>
-    <ArticleComment />
     <form class="article-comments__form">
       <h2 class="article-comments__form-title">Add Your Comment</h2>
       <p class="article-comments__form-description">

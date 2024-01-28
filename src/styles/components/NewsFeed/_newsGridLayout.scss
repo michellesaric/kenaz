@@ -1,0 +1,35 @@
+.news-card-small {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 21px;
+
+  .news-card-small__card {
+    @include FlexSpaceBetween;
+    cursor: pointer;
+
+    .news-card-small__card-image {
+      width: 120px;
+      height: 90px;
+      background-size: cover;
+      margin-right: 15px;
+    }
+    .news-card-small__card-date-title-wrapper {
+      .news-card-small__card-date {
+        @include VarelaRound($textGray, 12px, normal);
+        margin-bottom: 5px;
+      }
+      .news-card-small__card-title {
+        @include BitterBold($textBlack, 14px, normal);
+        max-width: 154px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .news-card-small {
+    @include FlexCenterVerticalColumn;
+  }
+}

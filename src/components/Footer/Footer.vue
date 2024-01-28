@@ -1,6 +1,6 @@
 <script setup>
-import FooterSocialMedia from "./FooterSocialMedia/FooterSocialMedia.vue";
-import FooterNewsLetter from "./FooterNewsletter/FooterNewsLetter.vue";
+import FooterSocialMedia from "./FooterSocialMedia.vue";
+import FooterNewsLetter from "./FooterNewsletter.vue";
 import FooterTagsWidgetVue from "./FooterTagsWidget/FooterTagsWidget.vue";
 import FooterPosts from "./FooterPosts/FooterPosts.vue";
 import FooterTwitterFeed from "./FooterTwitterFeed/FooterTwitterFeed.vue";
@@ -31,12 +31,3 @@ import FooterTwitterFeed from "./FooterTwitterFeed/FooterTwitterFeed.vue";
     </div>
   </footer>
 </template>
-
-<style lang="sass">
-@import "./_footer.scss"
-@import "./FooterSocialMedia/_footerSocialMedia.scss"
-@import "./FooterNewsletter/_footerNewsletter.scss"
-@import "./FooterTagsWidget/_footerTagsWidget.scss"
-@import "./FooterPosts/_footerPosts.scss"
-@import "./FooterTwitterFeed/_footerTwitterFeed.scss"
-</style>

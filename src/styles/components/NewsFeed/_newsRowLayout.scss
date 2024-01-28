@@ -1,0 +1,49 @@
+.news-row {
+  width: 100%;
+  @include FlexSpaceBetween;
+
+  .news-row__card {
+    cursor: pointer;
+
+    .news-row__card-image {
+      width: 170px;
+      height: 128px;
+      background-size: cover;
+      margin-bottom: 6px;
+    }
+    .news-row__card-date-comment-wrapper {
+      @include FlexSpaceBetween;
+      margin-bottom: 2px;
+
+      .news-row__card-date,
+      .news-row__card-comments {
+        @include VarelaRound($textGray, 12px, normal);
+      }
+    }
+
+    .news-row__card-title {
+      @include BitterBold($textBlack, 14px, normal);
+      max-width: 170px;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .news-row {
+    @include FlexCenterVerticalColumn;
+
+    .news-row__card {
+      margin-bottom: 20px;
+
+      .news-row__card-image {
+        width: 233px;
+        height: 160px;
+      }
+
+      .news-row__card-title {
+        @include BitterBold($textBlack, 18px, normal);
+        max-width: 233px;
+      }
+    }
+  }
+}

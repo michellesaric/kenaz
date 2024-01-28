@@ -1,0 +1,54 @@
+.article-comment__image {
+  margin-right: 17px;
+  width: auto;
+  height: 58px;
+}
+
+.article-comment__text-content {
+  .article-comment__name-date-link-wrapper {
+    @include FlexSpaceBetween;
+    align-items: flex-end;
+    margin-bottom: 4px;
+
+    .article-comment__name-date-wrapper {
+      display: flex;
+      align-items: flex-end;
+
+      .article-comment__name {
+        @include BitterRegular($backgroundPurple, 18px, 20px);
+        margin-right: 12px;
+      }
+
+      .article-comment__date {
+        @include Varela($textGray, 11px, 20px);
+      }
+    }
+    .article-comment__link {
+      @include VarelaRound($backgroundPurple, 14px, normal);
+    }
+  }
+
+  .article-comment__text {
+    @include Varela($textDarkGray, 13px, 20px);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .article-comment__text-content {
+    .article-comment__name-date-link-wrapper {
+      align-items: flex-start;
+      margin-bottom: 25px;
+      .article-comment__name-date-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .article-comment__name {
+          font-size: 14px;
+        }
+      }
+      .article-comment__link {
+        font-size: 12px;
+      }
+    }
+  }
+}

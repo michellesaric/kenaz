@@ -1,9 +1,9 @@
 <script setup>
 import SideBar from "./SideBar/SideBar.vue";
-import SideBarSocial from "./SideBarSocial/SideBarSocial.vue";
-import SideBarVideo from "./SideBarVideo/SideBarVideo.vue";
-import SideBarBannerContainer from "./SideBarBannerContainer/SideBarBannerContainer.vue";
-import SideBarFacebookFeed from "./SideBarFacebookFeed/SideBarFacebookFeed.vue";
+import SideBarSocial from "./SideBarSocial.vue";
+import SideBarVideo from "./SideBarVideo.vue";
+import SideBarBannerContainer from "./SideBarBannerContainer.vue";
+import SideBarFacebookFeed from "./SideBarFacebookFeed.vue";
 </script>
 
 <template>
@@ -15,12 +15,3 @@ import SideBarFacebookFeed from "./SideBarFacebookFeed/SideBarFacebookFeed.vue";
     <SideBarFacebookFeed />
   </div>
 </template>
-
-<style lang="sass">
-@import "./SideBar/_sideBar.scss"
-@import "./SideBarSocial/_sideBarSocial.scss"
-@import "./SideBarVideo/_sideBarVideo.scss"
-@import "./SideBarBannerContainer/_sideBarBannerContainer.scss"
-@import "./SideBarFacebookFeed/_sideBarFacebookFeed.scss"
-@import "./SideBar/SideBarItem/_sideBarItem.scss"
-</style>

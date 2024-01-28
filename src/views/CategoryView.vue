@@ -7,7 +7,7 @@ import NewsArticlesByCategory from "../components/NewsArticlesByCategory/NewsArt
 
 <template>
   <div class="background">
-    <div>
+    <div class="background-center">
       <Banner />
       <GallerySlider />
       <div class="view-main-content">

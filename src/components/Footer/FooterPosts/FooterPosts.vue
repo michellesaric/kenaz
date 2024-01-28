@@ -2,11 +2,7 @@
   <div class="footer-posts">
     <h2 class="footer-posts__title">{{ postTitle }}</h2>
     <div class="footer-posts__list">
-      <div
-        class="footer-posts__post"
-        v-for="post in posts"
-        key="featuredPost.id"
-      >
+      <div class="footer-posts__post" v-for="post in posts" :key="post.id">
         <div>
           <div class="footer-posts__post-date-comment-wrapper">
             <h4 class="footer-posts__post-date">{{ post.date }}</h4>

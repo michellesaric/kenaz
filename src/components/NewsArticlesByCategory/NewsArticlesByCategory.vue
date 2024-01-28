@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from "vue";
-import NewsArticleByCategory from "./NewsArticleByCategory/NewsArticleByCategory.vue";
+import { newsByCategory } from "./newsArticlesByCategory";
+import NewsArticleByCategory from "./NewsArticleByCategory.vue";
+
+const newsData = ref(newsByCategory);
+const news = newsData.value;
 
 const paginationNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 const activeNumber = ref(paginationNumbers[0]);
@@ -13,7 +17,13 @@ const classClick = (number) => {
 <template>
   <div class="news-articles-by-category">
     <h2 class="news-articles-by-category__main-title">News</h2>
-    <NewsArticleByCategory />
+    <div
+      class="news-article-by-category"
+      v-for="newsItem in news"
+      :key="newsItem.id"
+    >
+      <NewsArticleByCategory v-bind="newsItem" />
+    </div>
     <div class="news-articles-by-category__pagination">
       <div
         v-for="paginationNumber in paginationNumbers"
@@ -29,7 +39,3 @@ const classClick = (number) => {
     </div>
   </div>
 </template>
-
-<style lang="sass">
-@import "./NewsArticleByCategory/_newsArticleByCategory.scss"
-</style>

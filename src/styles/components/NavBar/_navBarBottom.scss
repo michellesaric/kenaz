@@ -1,0 +1,70 @@
+.nav-bottom__wrapper {
+  width: 100%;
+  background-color: $backgroundPurple;
+  @include FlexCenterVertical();
+
+  .nav-bottom {
+    width: 942px;
+    display: flex;
+
+    .nav-bottom__category {
+      @include BitterBold($white, 18px, normal);
+      padding: 15px 20px;
+      text-transform: uppercase;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .news {
+      @include CategoryTransition($newsBlue);
+    }
+
+    .business {
+      @include CategoryTransition($businessOrange);
+    }
+
+    .sport {
+      @include CategoryTransition($sportGreen);
+    }
+
+    .life {
+      @include CategoryTransition($lifeBlue);
+    }
+
+    .tech {
+      @include CategoryTransition($techYellow);
+    }
+
+    .travel {
+      @include CategoryTransition($travelBrown);
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .nav-bottom__wrapper {
+    .nav-bottom {
+      .nav-bottom__category {
+        @include BitterBold($white, 12px, normal);
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .nav-bottom__wrapper {
+    .nav-bottom {
+      overflow: auto;
+      white-space: nowrap;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

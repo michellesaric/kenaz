@@ -1,6 +1,9 @@
-@import "./components/NavBar/navBar";
-@import "./views/view";
-@import "./components/NewsFeed/newsFeedLayout";
-@import "./components/NewsArticlesByCategory/newsArticlesByCategory";
-@import "./components/SideBarContent/sideBarContent";
-@import "./components/Footer/footer";
+@import "./styles/components/NavBar/navBar";
+@import "./styles/components/Banner/banner";
+@import "./styles/components/GallerySlide/gallerySlide";
+@import "./styles/views/_view.scss";
+@import "./styles/components/NewsFeed/newsFeedBox";
+@import "./styles/components/SideBar/sideBarContent";
+@import "./styles/components/NewsArticlesByCategory/newsArticlesByCategory";
+@import "./styles/components/Article/article";
+@import "./styles/components/Footer/footer";

@@ -1,0 +1,35 @@
+.side-bar-video {
+  margin-bottom: 18px;
+  background-color: $white;
+
+  .side-bar-video__title {
+    @include BitterBold($textBlack, 24px, normal);
+    padding: 15px 0px 31px 31px;
+  }
+
+  .side-bar-video__text-content {
+    padding: 17px 46px 26px 32px;
+
+    .side-bar-video__date {
+      @include VarelaRound($textGray, 12px, normal);
+      margin-bottom: 5px;
+    }
+
+    .side-bar-video__text {
+      @include BitterBold($textBlack, 14px, 18px);
+
+      .NASA {
+        line-height: normal;
+      }
+    }
+  }
+}
+@media screen and (min-width: 630px) and (max-width: 990px) {
+  .side-bar-video {
+    .side-bar-video__video {
+      margin-left: 31px;
+      width: 561px;
+      height: 240px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.background {
+  width: 100%;
+  background-color: $backgroundWhite;
+  @include FlexCenterVertical;
+
+  .background-center {
+    @include FlexCenterVerticalColumn;
+
+    .view-main-content {
+      width: 100%;
+      @include FlexSpaceBetween;
+
+      .view-main-content__left {
+        width: 623px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .background {
+    .background-center {
+      .view-main-content {
+        @include FlexCenterVerticalColumn;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .background {
+    .background-center {
+      .view-main-content {
+        .view-main-content__left {
+          width: 303px;
+        }
+      }
+    }
+  }
+}

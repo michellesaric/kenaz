@@ -3,7 +3,7 @@
     <h2 class="footer-tags-widget__title">Tags Widget</h2>
 
     <div class="footer-tags-widget__tags">
-      <h4 class="footer-tags-widget__tag" v-for="tag in tags" :key="tags.id">
+      <h4 class="footer-tags-widget__tag" v-for="tag in tags" :key="tag.id">
         {{ tag.tag }}
       </h4>
     </div>

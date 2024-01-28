@@ -1,12 +1,12 @@
 <script setup>
 import NavBar from "./components/NavBar/NavBar.vue";
-import HomeView from "./views/HomeView.vue";
+import ArticleView from "./views/ArticleView.vue";
 import Footer from "./components/Footer/Footer.vue";
 </script>
 
 <template>
   <NavBar />
-  <HomeView />
+  <ArticleView />
   <Footer />
 </template>
 

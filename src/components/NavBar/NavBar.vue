@@ -1,5 +1,5 @@
 <script setup>
-import NavBarTop from "./NavBarTop/NavBarTop.vue";
+import NavBarTop from "./NavBarTop.vue";
 import NavBarBottom from "./NavBarBottom/NavBarBottom.vue";
 </script>
 
@@ -9,8 +9,3 @@ import NavBarBottom from "./NavBarBottom/NavBarBottom.vue";
     <NavBarBottom />
   </nav>
 </template>
-
-<style lang="sass">
-@import "./NavBarTop/_navBarTop.scss"
-@import "./NavBarBottom/_navBarBottom.scss"
-</style>

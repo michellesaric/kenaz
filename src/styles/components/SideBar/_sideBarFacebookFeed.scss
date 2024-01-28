@@ -1,0 +1,11 @@
+.side-bar-facebook-feed {
+  width: 100%;
+  padding: 15px 16px 20px 17px;
+  background-color: $white;
+}
+
+@media screen and (min-width: 630px) and (max-width: 990px) {
+  .side-bar-facebook-feed {
+    @include FlexCenterVertical;
+  }
+}

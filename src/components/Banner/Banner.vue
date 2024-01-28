@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { reactive, watch } from "vue";
+import { reactive, watch, onMounted, onBeforeUnmount } from "vue";
 
 export default {
   props: {
@@ -41,6 +41,32 @@ export default {
       heightValue: props.bannerHeight.replace("px", ""),
     });
 
+    const updateWidth = () => {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth <= 990 && screenWidth >= 630) {
+        dynamicStyles.width = "623px";
+        dynamicStyles.widthValue = "623";
+      } else if (screenWidth <= 630) {
+        dynamicStyles.width = "303px";
+        dynamicStyles.widthValue = "303";
+        dynamicStyles.height = "90px";
+        dynamicStyles.widthHeight = "90";
+        dynamicStyles.margin = "8px 0px";
+      } else {
+        dynamicStyles.width = props.bannerWidth;
+      }
+    };
+
+    onMounted(() => {
+      updateWidth();
+      window.addEventListener("resize", updateWidth);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener("resize", updateWidth);
+    });
+
     watch(
       [
         () => props.bannerWidth,
@@ -62,7 +88,3 @@ export default {
   },
 };
 </script>
-
-<style lang="sass">
-@import "./_banner.scss"
-</style>

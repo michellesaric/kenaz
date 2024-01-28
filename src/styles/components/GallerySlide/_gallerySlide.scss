@@ -1,0 +1,112 @@
+.gallery-slider {
+  width: 940px;
+
+  .splide__slide-image {
+    width: 940px;
+    height: 425px;
+    position: relative;
+    background-size: cover;
+    margin-bottom: 19px;
+
+    .splide__slide-text-content {
+      width: 100%;
+      padding: 61px 0px 28px 30px;
+      position: absolute;
+      bottom: 0;
+      background: url(src/assets/images/BlackGradient.png);
+
+      .splide__slide-date-comment-wrapper {
+        @include FlexCenterHorizontal;
+        margin-bottom: 10px;
+
+        .splide__slide-date,
+        .splide__slide-comments {
+          @include VarelaRound($textWhite, 12px, normal);
+          margin-right: 18px;
+        }
+
+        .splide__slide-comment-icon {
+          margin-right: 6px;
+        }
+      }
+
+      .splide__slide-title {
+        @include BitterBold($textWhite, 34px, normal);
+        margin-bottom: 10px;
+        max-width: 588px;
+      }
+
+      .splide__slide-button {
+        @include VarelaRound($textWhite, 14px, normal);
+        padding: 8px 22px;
+        background-color: transparent;
+        border: 1px solid $white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .gallery-slider {
+    width: 623px;
+
+    .splide__slide-image {
+      width: 623px;
+      height: 282px;
+
+      .splide__slide-text-content {
+        padding: 30px 0px 14px 15px;
+
+        .splide__slide-date-comment-wrapper {
+          margin-bottom: 3px;
+        }
+
+        .splide__slide-title {
+          @include BitterBold($textWhite, 20px, normal);
+          margin-bottom: 10px;
+          max-width: 500px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .gallery-slider {
+    width: 303px;
+
+    .splide__slide-image {
+      width: 303px;
+      height: 137px;
+      margin-bottom: 10px;
+
+      .splide__slide-text-content {
+        padding-left: 10px;
+
+        .splide__slide-date-comment-wrapper {
+          margin-bottom: 0px;
+
+          .splide__slide-date,
+          .splide__slide-comments {
+            @include VarelaRound($textWhite, 12px, normal);
+            margin-right: 18px;
+          }
+        }
+
+        .splide__slide-title {
+          @include BitterBold($textWhite, 12px, normal);
+          margin-bottom: 10px;
+          max-width: 200px;
+        }
+
+        .splide__slide-button {
+          @include VarelaRound($textWhite, 12px, normal);
+          padding: 4px 10px;
+        }
+      }
+    }
+  }
+}
