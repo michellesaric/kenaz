@@ -1,6 +1,6 @@
 <template>
   <div class="nav-bottom__wrapper">
-    <div class="nav-bottom">
+    <router-link to="/category" class="nav-bottom">
       <h2
         v-for="category in categories"
         :key="category"
@@ -13,7 +13,7 @@
       >
         {{ category }}
       </h2>
-    </div>
+    </router-link>
   </div>
 </template>
 

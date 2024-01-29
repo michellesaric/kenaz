@@ -1,7 +1,12 @@
 <template>
   <NewsFeedBox :title="title" :borderColor="borderColor">
     <div class="news-row">
-      <div class="news-row__card" v-for="newsItem in news" :key="newsItem.id">
+      <router-link
+        to="article"
+        class="news-row__card"
+        v-for="newsItem in news"
+        :key="newsItem.id"
+      >
         <div
           class="news-row__card-image"
           :style="{ backgroundImage: 'url(' + newsItem.imgUrl + ')' }"
@@ -13,7 +18,7 @@
           </h4>
         </div>
         <p class="news-row__card-title">{{ newsItem.title }}</p>
-      </div>
+      </router-link>
     </div>
   </NewsFeedBox>
 </template>

@@ -4,7 +4,7 @@
     <div class="article-about-author__image-description-wrapper">
       <img
         class="article-about-author__image"
-        src="../../../assets/images/Author.png"
+        src="../../assets/images/Author.png"
       />
       <p class="article-about-author__description">
         Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec

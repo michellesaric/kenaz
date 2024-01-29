@@ -29,7 +29,7 @@
       </p>
       <img
         class="article-text__social-image"
-        src="../../../assets/images/ArticleSocialMedia.png"
+        src="../../assets/images/ArticleSocialMedia.png"
       />
     </div>
   </div>

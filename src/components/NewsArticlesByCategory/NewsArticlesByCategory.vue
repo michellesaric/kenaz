@@ -17,13 +17,15 @@ const classClick = (number) => {
 <template>
   <div class="news-articles-by-category">
     <h2 class="news-articles-by-category__main-title">News</h2>
-    <div
-      class="news-article-by-category"
-      v-for="newsItem in news"
-      :key="newsItem.id"
-    >
-      <NewsArticleByCategory v-bind="newsItem" />
-    </div>
+    <router-link to="/article">
+      <div
+        class="news-article-by-category"
+        v-for="newsItem in news"
+        :key="newsItem.id"
+      >
+        <NewsArticleByCategory v-bind="newsItem" />
+      </div>
+    </router-link>
     <div class="news-articles-by-category__pagination">
       <div
         v-for="paginationNumber in paginationNumbers"

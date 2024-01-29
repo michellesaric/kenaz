@@ -25,13 +25,14 @@ const selectLink = (link) => {
       </h3>
     </div>
     <div class="side-bar__list">
-      <div
+      <router-link
+        to="/article"
         class="side-bar__item"
         v-for="sideBarItem in sideBarItems"
         :key="sideBarItem.id"
       >
         <SideBarItem v-bind="sideBarItem" />
-      </div>
+      </router-link>
     </div>
   </div>
 </template>

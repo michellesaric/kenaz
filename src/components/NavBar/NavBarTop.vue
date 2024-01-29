@@ -6,12 +6,12 @@ import SearchIcon from "../icons/SearchIconSmall.vue";
 <template>
   <div class="nav-top__wrapper">
     <div class="nav-top">
-      <div class="nav-top__logo">
+      <router-link to="/" class="nav-top__logo">
         <div class="nav-top__logo-icon">
           <LogoWhite />
         </div>
         <h2 class="nav-top__logo-text">Kenaz</h2>
-      </div>
+      </router-link>
       <div class="nav-top__links">
         <h3 class="nav-top__links-text">Media</h3>
         <h3 class="nav-top__links-text">Marketing</h3>

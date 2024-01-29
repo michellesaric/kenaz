@@ -10,10 +10,10 @@ import Skype from "../icons/Social Media/SkypeBoxIcon.vue";
 
 <template>
   <div class="footer-social-media">
-    <div class="footer-social-media__logo">
+    <router-link to="/" class="footer-social-media__logo">
       <img src="../../assets/images/LogoBlue.png" />
       <h2 class="footer-social-media__logo-text">Kenaz</h2>
-    </div>
+    </router-link>
     <p class="footer-social-media__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.
     </p>

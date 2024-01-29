@@ -1,7 +1,8 @@
 <template>
   <NewsFeedBox :title="title" :borderColor="borderColor">
     <div class="news-card-small">
-      <div
+      <router-link
+        to="/article"
         class="news-card-small__card"
         v-for="newsItem in news"
         :key="newsItem.id"
@@ -14,7 +15,7 @@
           <h4 class="news-card-small__card-date">{{ newsItem.date }}</h4>
           <p class="news-card-small__card-title">{{ newsItem.title }}</p>
         </div>
-      </div>
+      </router-link>
     </div>
   </NewsFeedBox>
 </template>
