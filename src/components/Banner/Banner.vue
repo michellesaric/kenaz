@@ -6,12 +6,7 @@
       height: dynamicStyles.height,
       margin: dynamicStyles.margin,
     }"
-  >
-    <p class="banner__title">banner</p>
-    <p class="banner__area">
-      {{ dynamicStyles.widthValue }}x{{ dynamicStyles.heightValue }}
-    </p>
-  </div>
+  ></div>
 </template>
 
 <script>
@@ -37,8 +32,6 @@ export default {
       width: props.bannerWidth,
       height: props.bannerHeight,
       margin: props.bannerMargin,
-      widthValue: props.bannerWidth.replace("px", ""),
-      heightValue: props.bannerHeight.replace("px", ""),
     });
 
     const updateWidth = () => {
@@ -49,9 +42,7 @@ export default {
         dynamicStyles.widthValue = "623";
       } else if (screenWidth <= 630) {
         dynamicStyles.width = "303px";
-        dynamicStyles.widthValue = "303";
         dynamicStyles.height = "90px";
-        dynamicStyles.widthHeight = "90";
         dynamicStyles.margin = "8px 0px";
       } else {
         dynamicStyles.width = props.bannerWidth;
@@ -77,8 +68,6 @@ export default {
         dynamicStyles.width = props.bannerWidth;
         dynamicStyles.height = props.bannerHeight;
         dynamicStyles.margin = props.bannerMargin;
-        dynamicStyles.widthValue = props.bannerWidth.replace("px", "");
-        dynamicStyles.heightValue = props.bannerHeight.replace("px", "");
       }
     );
 

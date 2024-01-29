@@ -20,6 +20,11 @@ const selectedOptions = {
   rewind: true,
   pagination: false,
   arrows: true,
+  breakpoints: {
+    630: {
+      perPage: 1,
+    },
+  },
 };
 </script>
 

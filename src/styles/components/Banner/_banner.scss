@@ -1,10 +1,6 @@
 .banner {
-  background-color: $white;
-  border: 1px solid $lightGray;
+  background: url(src/assets/images/SomeBanner.jpg);
+  background-size: cover;
+  background-position: center;
   @include FlexCenterColumn;
-
-  .banner__title,
-  .banner__area {
-    @include VarelaRound($gray, 14px, normal);
-  }
 }

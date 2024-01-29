@@ -42,3 +42,11 @@
 .news-carousel-two-image__title {
   @include BitterBold($textBlack, 14px, normal);
 }
+
+@media screen and (max-width: 630px) {
+  .splide__arrows {
+    .splide__arrow--prev {
+      left: 193px;
+    }
+  }
+}
