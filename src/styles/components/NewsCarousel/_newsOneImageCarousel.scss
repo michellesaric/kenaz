@@ -1,0 +1,48 @@
+.news-carousel-one-image {
+  width: 230px;
+
+  .splide__arrows {
+    .splide__arrow {
+      background: transparent;
+      border-radius: 0;
+      width: 16px;
+      height: 22px;
+      opacity: 1;
+    }
+
+    .splide__arrow--prev {
+      left: 188px;
+      top: -44px;
+    }
+
+    .splide__arrow--prev svg {
+      transform: none;
+    }
+
+    .splide__arrow--prev svg,
+    .splide__arrow--next svg {
+      width: 16px;
+      height: 22px;
+    }
+
+    .splide__arrow--next {
+      right: 0px;
+      top: -44px;
+    }
+  }
+
+  .news-carousel-one-image__image {
+    width: 230px;
+    height: 150px;
+    margin-bottom: 9px;
+  }
+
+  .news-carousel-one-image__date {
+    @include VarelaRound($textGray, 12px, normal);
+    margin-bottom: 6px;
+  }
+
+  .news-carousel-one-image__title {
+    @include BitterBold($textBlack, 14px, normal);
+  }
+}

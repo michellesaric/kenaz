@@ -1,0 +1,15 @@
+@import "./newsTwoImageCarousel";
+@import "./newsOneImageCarousel";
+
+.news-carousel-box {
+  padding: 28px 30px;
+  background-color: $white;
+  width: 100%;
+  margin-bottom: 17px;
+
+  .news-carousel-box__title {
+    @include BitterBold($textBlack, 24px, normal);
+    max-width: 230px;
+    margin-bottom: 30px;
+  }
+}

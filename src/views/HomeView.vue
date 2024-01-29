@@ -4,6 +4,8 @@ import GallerySlider from "../components/GallerySlider/GallerySlider.vue";
 import SideBarContent from "../components/SideBarContent/SideBarContent.vue";
 import NewsRowLayout from "../components/NewsFeed/NewsRowLayout/NewsRowLayout.vue";
 import NewsGridLayout from "../components/NewsFeed/NewsGridLayout/NewsGridLayout.vue";
+import NewsTwoImageCarousel from "../components/NewsCarousel/NewsTwoImageCarousel/NewsTwoImageCarousel.vue";
+import NewsOneImageCarousel from "../components/NewsCarousel/NewsOneImageCarousel/NewsOneImageCarousel.vue";
 </script>
 
 <template>
@@ -26,6 +28,11 @@ import NewsGridLayout from "../components/NewsFeed/NewsGridLayout/NewsGridLayout
             :bannerHeight="'120px'"
             :bannerMargin="'0px 0px 27px'"
           />
+          <NewsTwoImageCarousel title="News Carousel" borderColor="#fcc44d" />
+          <div class="view-carousel-container">
+            <NewsOneImageCarousel title="Editorials" borderColor="#a99765" />
+            <NewsOneImageCarousel title="Local News" borderColor="#a99765" />
+          </div>
         </div>
         <SideBarContent />
       </div>

@@ -12,6 +12,12 @@
 
       .view-main-content__left {
         width: 623px;
+
+        .view-carousel-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 17px;
+        }
       }
     }
   }
@@ -33,6 +39,11 @@
       .view-main-content {
         .view-main-content__left {
           width: 303px;
+
+          .view-carousel-container {
+            display: flex;
+            flex-direction: column;
+          }
         }
       }
     }
