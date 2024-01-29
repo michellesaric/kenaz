@@ -1,6 +1,36 @@
 .gallery-slider {
   width: 940px;
 
+  .splide__arrows {
+    .splide__arrow {
+      background: transparent;
+      border-radius: 0;
+      width: 36px;
+      height: 53px;
+      opacity: 1;
+    }
+
+    .splide__arrow--prev {
+      left: 28px;
+      top: 195px;
+    }
+
+    .splide__arrow--prev svg {
+      transform: none;
+    }
+
+    .splide__arrow--prev svg,
+    .splide__arrow--next svg {
+      width: 36px;
+      height: 53px;
+    }
+
+    .splide__arrow--next {
+      right: 28px;
+      top: 195px;
+    }
+  }
+
   .splide__slide-image {
     width: 940px;
     height: 425px;
@@ -50,6 +80,23 @@
   .gallery-slider {
     width: 623px;
 
+    .splide__arrows {
+      .splide__arrow {
+        width: 18px;
+        height: auto;
+      }
+
+      .splide__arrow--prev {
+        left: 15px;
+        top: 145px;
+      }
+
+      .splide__arrow--next {
+        right: 15px;
+        top: 145px;
+      }
+    }
+
     .splide__slide-image {
       width: 623px;
       height: 282px;
@@ -77,6 +124,23 @@
 @media screen and (max-width: 630px) {
   .gallery-slider {
     width: 303px;
+
+    .splide__arrows {
+      .splide__arrow {
+        width: 10px;
+        height: auto;
+      }
+
+      .splide__arrow--prev {
+        left: 10px;
+        top: 45px;
+      }
+
+      .splide__arrow--next {
+        right: 10px;
+        top: 45px;
+      }
+    }
 
     .splide__slide-image {
       width: 303px;

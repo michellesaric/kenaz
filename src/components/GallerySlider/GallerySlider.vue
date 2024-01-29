@@ -1,7 +1,10 @@
 <script setup>
 import GallerySlide from "./GallerySlide.vue";
+import LeftArrowGray from "../icons/LeftArrowGray.vue";
+import RightArrowGray from "../icons/RightArrowGray.vue";
 import { ref } from "vue";
 import { galleryContent } from "./gallerySlider";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
 
 const galleryData = ref(galleryContent);
@@ -16,17 +19,11 @@ const selectedOptions = {
 
 <template>
   <div class="gallery-slider">
-    <Splide :options="selectedOptions" aria-label="My Favorite Images">
-      <SplideSlide v-for="galleryItem in galleryItems" :key="galleryItem.id">
-        <GallerySlide v-bind="galleryItem" />
-      </SplideSlide>
-    </Splide>
-    <!-- <Splide
+    <Splide
       :has-track="false"
       :options="selectedOptions"
       aria-label="Gallery Images"
     >
-      <div class="custom-wrapper">
       <SplideTrack>
         <SplideSlide v-for="galleryItem in galleryItems" :key="galleryItem.id"
           ><GallerySlide v-bind="galleryItem"
@@ -34,10 +31,13 @@ const selectedOptions = {
       </SplideTrack>
 
       <div class="splide__arrows">
-        <button class="splide__arrow splide__arrow--prev">Prev</button>
-        <button class="splide__arrow splide__arrow--next">Next</button>
+        <button class="splide__arrow splide__arrow--prev">
+          <LeftArrowGray />
+        </button>
+        <button class="splide__arrow splide__arrow--next">
+          <RightArrowGray />
+        </button>
       </div>
-      </div>
-    </Splide> -->
+    </Splide>
   </div>
 </template>

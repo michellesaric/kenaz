@@ -2,7 +2,7 @@
 import Banner from "../components/Banner/Banner.vue";
 import SideBarContent from "../components/SideBarContent/SideBarContent.vue";
 import Article from "../components/Article/Article.vue";
-import ArticleHeader from "../components/Article/ArticleHeader/ArticleHeader.vue";
+import ArticleHeader from "../components/Article/ArticleHeader.vue";
 </script>
 
 <template>

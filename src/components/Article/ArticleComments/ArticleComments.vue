@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { commentList } from "./articleComments.js";
-import ArticleComment from "./ArticleComment/ArticleComment.vue";
+import ArticleComment from "./ArticleComment.vue";
 
 const commentsData = ref(commentList);
 const comments = commentsData.value;
