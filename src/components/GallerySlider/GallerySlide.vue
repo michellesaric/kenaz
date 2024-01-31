@@ -1,18 +1,23 @@
 <script setup>
 import { defineProps } from "vue";
+import { formatDate } from "../../utils/formatDate";
 const props = defineProps({
-  id: Number,
+  id: String,
+  imageUrl: String,
+  title: String,
   date: String,
   comments: Number,
-  imgUrl: String,
-  title: String,
+  author: String,
+  source: String,
+  sourceDescription: String,
+  content: String,
 });
 </script>
 
 <template>
   <div
     class="splide__slide-image"
-    :style="{ backgroundImage: 'url(' + props.imgUrl + ')' }"
+    :style="{ backgroundImage: 'url(' + props.imageUrl + ')' }"
   >
     <div class="splide__slide-text-content">
       <div class="splide__slide-date-comment-wrapper">

@@ -42,7 +42,7 @@
       width: 100%;
       padding: 61px 0px 28px 30px;
       position: absolute;
-      bottom: 0;
+      bottom: 0px;
       background: url(src/assets/images/BlackGradient.png);
 
       .splide__slide-date-comment-wrapper {
@@ -64,6 +64,12 @@
         @include BitterBold($textWhite, 34px, normal);
         margin-bottom: 10px;
         max-width: 588px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
       }
 
       .splide__slide-button {
