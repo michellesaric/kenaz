@@ -64,12 +64,7 @@
         @include BitterBold($textWhite, 34px, normal);
         margin-bottom: 10px;
         max-width: 588px;
-
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        -webkit-line-clamp: 2;
-        text-overflow: ellipsis;
+        @include TextCutter(2);
       }
 
       .splide__slide-button {

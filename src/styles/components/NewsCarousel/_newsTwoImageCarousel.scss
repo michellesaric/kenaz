@@ -42,6 +42,7 @@
 
 .news-carousel-two-image__title {
   @include BitterBold($textBlack, 14px, normal);
+  @include TextCutter(3);
 }
 
 @media screen and (max-width: 630px) {

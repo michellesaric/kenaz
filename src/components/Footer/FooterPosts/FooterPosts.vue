@@ -1,6 +1,25 @@
+<script setup>
+import { ref, onMounted, defineProps } from "vue";
+import { mapNewsDataByCategoryAndPageSize } from "@/api/map";
+
+const props = defineProps(["postTitle"]);
+const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
+
+const posts = ref([]);
+
+onMounted(async () => {
+  try {
+    const data = await mapNewsDataByCategoryAndPageSize("general", 3);
+    posts.value = data;
+  } catch (error) {
+    console.error("Error fetching news data:", error);
+  }
+});
+</script>
+
 <template>
   <div class="footer-posts">
-    <h2 class="footer-posts__title">{{ postTitle }}</h2>
+    <h2 class="footer-posts__title">{{ props.postTitle }}</h2>
     <div class="footer-posts__list">
       <div class="footer-posts__post" v-for="post in posts" :key="post.id">
         <div>
@@ -12,26 +31,13 @@
           </div>
           <p class="footer-posts__post-title">{{ post.title }}</p>
         </div>
-        <img src="../../../assets/images/FooterImage.png" />
+        <div
+          class="footer-posts__post-image"
+          :style="{
+            backgroundImage: `url(${post.imageUrl || noImageAvailable})`,
+          }"
+        ></div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-import { ref } from "vue";
-import { posts } from "./footerPosts";
-
-export default {
-  props: ["postTitle"],
-  setup(props) {
-    const postTitle = ref(props.postTitle);
-    const postsData = ref(posts);
-
-    return {
-      posts: postsData,
-      postTitle,
-    };
-  },
-};
-</script>

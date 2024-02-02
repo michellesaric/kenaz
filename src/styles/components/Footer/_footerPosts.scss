@@ -22,6 +22,14 @@
     }
     .footer-posts__post-title {
       @include BitterBold($textLightGray, 14px, normal);
+      max-width: 230px;
+      @include TextCutter(3);
+    }
+
+    .footer-posts__post-image {
+      width: 70px;
+      height: 70px;
+      background-size: cover;
     }
   }
 

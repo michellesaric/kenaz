@@ -31,6 +31,7 @@
 
     .side-bar__item-title {
       @include BitterBold($white, 14px, normal);
+      @include TextCutter(3);
     }
   }
 

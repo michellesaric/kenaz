@@ -24,6 +24,7 @@
     .news-row__card-title {
       @include BitterBold($textBlack, 14px, normal);
       max-width: 170px;
+      @include TextCutter(3);
     }
   }
 }

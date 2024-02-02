@@ -51,3 +51,11 @@
     background-position: 0 100%;
   }
 }
+
+@mixin TextCutter($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $line;
+  text-overflow: ellipsis;
+}

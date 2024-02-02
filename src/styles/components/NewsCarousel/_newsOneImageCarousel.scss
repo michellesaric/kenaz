@@ -45,5 +45,6 @@
 
   .news-carousel-one-image__title {
     @include BitterBold($textBlack, 14px, normal);
+    @include TextCutter(4);
   }
 }
