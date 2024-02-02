@@ -3,10 +3,17 @@ import { defineProps } from "vue";
 
 const props = defineProps({
   id: Number,
-  comments: Number,
-  date: String,
+  imageUrl: String,
   title: String,
+  date: String,
+  comments: Number,
+  author: String,
+  source: String,
+  sourceDescription: String,
+  content: String,
 });
+
+const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
 </script>
 
 <template>
@@ -18,8 +25,10 @@ const props = defineProps({
     <h4 class="side-bar__item-date">{{ props.date }}</h4>
     <p class="side-bar__item-title">{{ props.title }}</p>
   </div>
-  <img
+  <div
     class="side-bar__item-image"
-    src="../../../assets/images/SideBarImage.png"
-  />
+    :style="{
+      backgroundImage: `url(${props.imageUrl || noImageAvailable})`,
+    }"
+  ></div>
 </template>

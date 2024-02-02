@@ -1,6 +1,5 @@
 <script setup>
 import { defineProps } from "vue";
-import { formatDate } from "../../utils/formatDate";
 const props = defineProps({
   id: String,
   imageUrl: String,

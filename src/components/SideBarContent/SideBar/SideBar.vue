@@ -1,15 +1,25 @@
 <script setup>
-import { sideBarContent } from "./sideBar";
-import { ref } from "vue";
+import { mapNewsData } from "@/api/map";
+import { ref, onMounted } from "vue";
 import SideBarItem from "./SideBarItem.vue";
 
 const links = ["Popular", "Top Rated", "Comments"];
 const selectedLink = ref(links[0]);
-const sideBarItems = ref(sideBarContent).value;
 
 const selectLink = (link) => {
   selectedLink.value = link;
 };
+
+const sideBarItems = ref([]);
+
+onMounted(async () => {
+  try {
+    const data = await mapNewsData();
+    sideBarItems.value = data;
+  } catch (error) {
+    console.error("Error fetching news data:", error);
+  }
+});
 </script>
 
 <template>

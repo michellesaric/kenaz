@@ -2,10 +2,10 @@
 import Banner from "../components/Banner/Banner.vue";
 import GallerySlider from "../components/GallerySlider/GallerySlider.vue";
 import SideBarContent from "../components/SideBarContent/SideBarContent.vue";
-import NewsRowLayout from "../components/NewsFeed/NewsRowLayout/NewsRowLayout.vue";
-import NewsGridLayout from "../components/NewsFeed/NewsGridLayout/NewsGridLayout.vue";
-import NewsTwoImageCarousel from "../components/NewsCarousel/NewsTwoImageCarousel/NewsTwoImageCarousel.vue";
-import NewsOneImageCarousel from "../components/NewsCarousel/NewsOneImageCarousel/NewsOneImageCarousel.vue";
+import NewsRowLayout from "../components/NewsFeed/NewsRowLayout.vue";
+import NewsGridLayout from "../components/NewsFeed/NewsGridLayout.vue";
+import NewsTwoImageCarousel from "../components/NewsCarousel/NewsTwoImageCarousel.vue";
+import NewsOneImageCarousel from "../components/NewsCarousel/NewsOneImageCarousel.vue";
 import HomeGallery from "../components/HomeGallery/HomeGallery.vue";
 </script>
 
