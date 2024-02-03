@@ -1,6 +1,7 @@
 <script setup>
 import LeftArrowGray from "../icons/LeftArrowGray.vue";
 import RightArrowGray from "../icons/RightArrowGray.vue";
+import HomeGalleryModal from "./HomeGalleryModal.vue";
 
 import { ref, onMounted } from "vue";
 import { homeGallery } from "./homeGallery";
@@ -17,13 +18,13 @@ const thumbs = ref();
 const mainOptions = ref(mainOptionsData).value;
 const thumbnailOptions = ref(thumbnailOptionsData).value;
 
-let isEnlargedImage = false;
+let isEnlargedImage = ref(false);
+let currentHomeGalleryImage = ref(null);
 
-const changeImageSize = () => {
-  isEnlargedImage = !isEnlargedImage;
+const changeImageSize = (homeGalleryImage) => {
+  isEnlargedImage.value = !isEnlargedImage.value;
+  currentHomeGalleryImage.value = homeGalleryImage.imgUrl;
 };
-
-console.log(isEnlargedImage);
 
 onMounted(() => {
   const thumbsSplide = thumbs.value?.splide;
@@ -47,18 +48,12 @@ onMounted(() => {
         :key="homeGalleryImage.id"
       >
         <div
-          :class="{
-            'home-gallery__image': !isEnlargedImage,
-            'home-gallery__enlarged-image': isEnlargedImage,
-          }"
+          class="home-gallery__image"
           :style="{ backgroundImage: 'url(' + homeGalleryImage.imgUrl + ')' }"
         >
           <div
-            :class="{
-              'home-gallery__search-icon': !isEnlargedImage,
-              'home-gallery__exit-icon': isEnlargedImage,
-            }"
-            @click="changeImageSize"
+            @click="() => changeImageSize(homeGalleryImage)"
+            class="home-gallery__search-icon"
           ></div>
         </div>
       </SplideSlide>
@@ -93,5 +88,11 @@ onMounted(() => {
         </button>
       </div>
     </Splide>
+
+    <HomeGalleryModal
+      v-if="isEnlargedImage"
+      :imgUrl="currentHomeGalleryImage"
+      :changeImageSize="changeImageSize"
+    />
   </div>
 </template>

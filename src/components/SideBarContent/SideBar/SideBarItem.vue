@@ -2,7 +2,7 @@
 import { defineProps } from "vue";
 
 const props = defineProps({
-  id: Number,
+  id: String,
   imageUrl: String,
   title: String,
   date: String,

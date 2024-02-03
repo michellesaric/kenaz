@@ -31,7 +31,6 @@ onMounted(async () => {
   try {
     const data = await mapNewsDataByCategory("general");
     news.value = data;
-    console.log(news.value);
   } catch (error) {
     console.error("Error fetching news data:", error);
   }

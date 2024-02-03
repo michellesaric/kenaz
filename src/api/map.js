@@ -27,7 +27,7 @@ export async function mapNewsData() {
       comments: 5,
       author: news.author,
       source: news.source.name,
-      sourceDecription: news.source.description,
+      sourceDescription: news.source.description,
       content: news.content,
     };
   });
@@ -53,7 +53,7 @@ export async function mapNewsDataByCategory(category) {
       comments: 5,
       author: news.author,
       source: news.source.name,
-      sourceDecription: news.source.description,
+      sourceDescription: news.source.description,
       content: news.content,
     };
   });
@@ -82,7 +82,7 @@ export async function mapNewsDataByCategoryAndPageSize(category, pageSize) {
       comments: 5,
       author: news.author,
       source: news.source.name,
-      sourceDecription: news.source.description,
+      sourceDescription: news.source.description,
       content: news.content,
     };
   });
@@ -111,7 +111,7 @@ export async function mapNewsDataByCategoryAndPageNumber(category, pageNumber) {
       comments: 5,
       author: news.author,
       source: news.source.name,
-      sourceDecription: news.source.description,
+      sourceDescription: news.source.description,
       content: news.content,
     };
   });

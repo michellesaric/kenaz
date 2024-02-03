@@ -1,0 +1,35 @@
+.home-gallery-modal {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  overflow: hidden;
+  @include FlexCenter;
+
+  .home-gallery-modal__image {
+    width: 700px;
+    height: 320px;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+
+    .home-gallery-modal__exit-icon {
+      background: url(src/assets/images/ExitIcon.jpg);
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .home-gallery-modal {
+    .home-gallery-modal__image {
+      width: 550px;
+      height: 300px;
+    }
+  }
+}
