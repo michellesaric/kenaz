@@ -1,3 +1,18 @@
+<script setup>
+import { ref, onMounted } from "vue";
+import { mapNewsDataByCategoryAndPageSize } from "@/api/map";
+
+const news = ref([]);
+
+onMounted(async () => {
+  try {
+    const data = await mapNewsDataByCategoryAndPageSize("entertainment", 1);
+    news.value = data;
+  } catch (error) {
+    console.error("Error fetching news data:", error);
+  }
+});
+</script>
 <template>
   <section class="side-bar-video">
     <h2 class="side-bar-video__title">Kenaz TV</h2>
@@ -14,10 +29,9 @@
       ></iframe>
     </div>
     <div class="side-bar-video__text-content">
-      <h4 class="side-bar-video__date">August 26, 2013</h4>
+      <h4 class="side-bar-video__date">{{ news.date }}</h4>
       <p class="side-bar-video__text">
-        <span class="NASA">NASA</span> releases portrait of a planet waving at
-        Saturn
+        <router-link to="/article"> {{ news.title }}</router-link>
       </p>
     </div>
   </section>
