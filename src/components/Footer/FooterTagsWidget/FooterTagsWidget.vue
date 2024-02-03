@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-tags-widget">
+  <section class="footer-tags-widget">
     <h2 class="footer-tags-widget__title">Tags Widget</h2>
 
     <div class="footer-tags-widget__tags">
@@ -7,7 +7,7 @@
         {{ tag.tag }}
       </h4>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

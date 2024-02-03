@@ -10,12 +10,12 @@ import ArticleHeader from "../components/Article/ArticleHeader.vue";
     <div class="background-center">
       <Banner />
       <ArticleHeader />
-      <div class="view-main-content">
+      <main class="view-main-content">
         <div class="view-main-content__left">
           <Article />
         </div>
         <SideBarContent />
-      </div>
+      </main>
     </div>
   </div>
 </template>

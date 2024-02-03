@@ -2,7 +2,7 @@
 import FooterSocialMedia from "./FooterSocialMedia.vue";
 import FooterNewsLetter from "./FooterNewsletter.vue";
 import FooterTagsWidgetVue from "./FooterTagsWidget/FooterTagsWidget.vue";
-import FooterPosts from "./FooterPosts/FooterPosts.vue";
+import FooterPosts from "./FooterPosts.vue";
 import FooterTwitterFeed from "./FooterTwitterFeed/FooterTwitterFeed.vue";
 </script>
 

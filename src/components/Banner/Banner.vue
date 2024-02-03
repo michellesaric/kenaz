@@ -1,12 +1,12 @@
 <template>
-  <div
+  <section
     class="banner"
     :style="{
       width: dynamicStyles.width,
       height: dynamicStyles.height,
       margin: dynamicStyles.margin,
     }"
-  ></div>
+  ></section>
 </template>
 
 <script>

@@ -13,9 +13,9 @@ import SearchIcon from "../icons/SearchIconSmall.vue";
         <h2 class="nav-top__logo-text">Kenaz</h2>
       </router-link>
       <div class="nav-top__links">
-        <h3 class="nav-top__links-text">Media</h3>
-        <h3 class="nav-top__links-text">Marketing</h3>
-        <h3 class="nav-top__links-text">Contact</h3>
+        <a class="nav-top__links-text">Media</a>
+        <a class="nav-top__links-text">Marketing</a>
+        <a class="nav-top__links-text">Contact</a>
         <div class="nav-top__links-search-icon">
           <SearchIcon />
         </div>

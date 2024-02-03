@@ -7,11 +7,11 @@ import SideBarFacebookFeed from "./SideBarFacebookFeed.vue";
 </script>
 
 <template>
-  <div class="side-bar-content">
+  <aside class="side-bar-content">
     <SideBar />
     <SideBarSocial />
     <SideBarVideo />
     <SideBarBannerContainer />
     <SideBarFacebookFeed />
-  </div>
+  </aside>
 </template>

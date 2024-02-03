@@ -3,7 +3,7 @@ import TwitterLogoBlue from "../../icons/TwitterLogoBlue.vue";
 </script>
 
 <template>
-  <div class="footer-twitter-feed">
+  <section class="footer-twitter-feed">
     <h2 class="footer-twitter-feed__title">Twitter Feed</h2>
     <div class="footer-twitter-feed__list">
       <div
@@ -21,7 +21,7 @@ import TwitterLogoBlue from "../../icons/TwitterLogoBlue.vue";
         <p class="footer-twitter-feed__tweet-text">{{ tweet.tweet }}</p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

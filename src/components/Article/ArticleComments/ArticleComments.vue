@@ -8,7 +8,7 @@ const comments = commentsData.value;
 </script>
 
 <template>
-  <div class="article-comments">
+  <section class="article-comments">
     <h2 class="article-comments__title">Comments</h2>
     <div class="article-comments__list">
       <div
@@ -44,5 +44,5 @@ const comments = commentsData.value;
       ></textarea>
       <button class="article-comments__form-button">Submit</button>
     </form>
-  </div>
+  </section>
 </template>

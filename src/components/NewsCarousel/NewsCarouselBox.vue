@@ -1,11 +1,11 @@
 <template>
-  <div
+  <section
     class="news-carousel-box"
     :style="{ borderLeft: '10px solid ' + borderColor }"
   >
     <h2 class="news-carousel-box__title">{{ title }}</h2>
     <slot></slot>
-  </div>
+  </section>
 </template>
 
 <script>

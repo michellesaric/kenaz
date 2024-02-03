@@ -4,9 +4,9 @@ import Footer from "./components/Footer/Footer.vue";
 </script>
 
 <template>
-  <NavBar />
+  <NavBar v-if="!$route.meta.hideNavBar" />
   <router-view></router-view>
-  <Footer />
+  <Footer v-if="!$route.meta.hideFooter" />
 </template>
 
 <style lang="sass">

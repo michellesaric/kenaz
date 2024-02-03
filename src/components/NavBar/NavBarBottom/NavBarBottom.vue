@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bottom__wrapper">
     <router-link to="/category" class="nav-bottom">
-      <h2
+      <a
         v-for="category in categories"
         :key="category"
         @click="classClick(category)"
@@ -12,7 +12,7 @@
         ]"
       >
         {{ category }}
-      </h2>
+      </a>
     </router-link>
   </div>
 </template>

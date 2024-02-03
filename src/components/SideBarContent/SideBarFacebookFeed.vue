@@ -1,5 +1,5 @@
 <template>
-  <div class="side-bar-facebook-feed">
+  <section class="side-bar-facebook-feed">
     <img src="../../assets/images/FaceBookFeed.png" />
-  </div>
+  </section>
 </template>

@@ -23,7 +23,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="side-bar">
+  <section class="side-bar">
     <div class="side-bar__top">
       <h3
         v-for="link in links"
@@ -44,5 +44,5 @@ onMounted(async () => {
         <SideBarItem v-bind="sideBarItem" />
       </router-link>
     </div>
-  </div>
+  </section>
 </template>

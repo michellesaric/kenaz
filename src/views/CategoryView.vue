@@ -10,13 +10,13 @@ import NewsArticlesByCategory from "../components/NewsArticlesByCategory/NewsArt
     <div class="background-center">
       <Banner />
       <GallerySlider />
-      <div class="view-main-content">
+      <main class="view-main-content">
         <div class="view-main-content__left">
           <NewsArticlesByCategory />
           <Banner :bannerWidth="'620px'" />
         </div>
         <SideBarContent />
-      </div>
+      </main>
     </div>
   </div>
 </template>

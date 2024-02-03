@@ -5,7 +5,7 @@ import YouTubeIcon from "../icons/Social Media/YouTubeBoxIcon.vue";
 </script>
 
 <template>
-  <div class="side-bar-social">
+  <section class="side-bar-social">
     <h2 class="side-bar-social__title">Social</h2>
     <div class="side-bar-social__item">
       <FacebookIcon :width="'43'" :height="'43'" />
@@ -22,5 +22,5 @@ import YouTubeIcon from "../icons/Social Media/YouTubeBoxIcon.vue";
       <button class="side-bar-social__item-text">Subscribe</button>
       <h3 class="side-bar-social__item-following">941 Subscribers</h3>
     </div>
-  </div>
+  </section>
 </template>

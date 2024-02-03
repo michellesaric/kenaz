@@ -46,14 +46,18 @@ onMounted(async () => {
     >
       <SplideTrack>
         <SplideSlide v-for="newsItem in news" :key="newsItem.id">
-          <div
-            class="news-carousel-two-image__image"
-            :style="{
-              backgroundImage: `url(${newsItem.imageUrl || noImageAvailable})`,
-            }"
-          ></div>
-          <h4 class="news-carousel-two-image__date">{{ newsItem.date }}</h4>
-          <p class="news-carousel-two-image__title">{{ newsItem.title }}</p>
+          <router-link to="/article">
+            <div
+              class="news-carousel-two-image__image"
+              :style="{
+                backgroundImage: `url(${
+                  newsItem.imageUrl || noImageAvailable
+                })`,
+              }"
+            ></div>
+            <h4 class="news-carousel-two-image__date">{{ newsItem.date }}</h4>
+            <p class="news-carousel-two-image__title">{{ newsItem.title }}</p>
+          </router-link>
         </SplideSlide>
       </SplideTrack>
 

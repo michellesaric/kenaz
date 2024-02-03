@@ -1,5 +1,5 @@
 <template>
-  <div class="article-about-author">
+  <section class="article-about-author">
     <h2 class="article-about-author__title">About the Author</h2>
     <div class="article-about-author__image-description-wrapper">
       <img
@@ -14,5 +14,5 @@
         eget duis consectetuer tristique nunc vitae erat, mi purus nisl lorem.
       </p>
     </div>
-  </div>
+  </section>
 </template>

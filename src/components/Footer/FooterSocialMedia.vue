@@ -9,7 +9,7 @@ import Skype from "../icons/Social Media/SkypeBoxIcon.vue";
 </script>
 
 <template>
-  <div class="footer-social-media">
+  <section class="footer-social-media">
     <router-link to="/" class="footer-social-media__logo">
       <img src="../../assets/images/LogoBlue.png" />
       <h2 class="footer-social-media__logo-text">Kenaz</h2>
@@ -26,5 +26,5 @@ import Skype from "../icons/Social Media/SkypeBoxIcon.vue";
       <YouTube />
       <Skype />
     </div>
-  </div>
+  </section>
 </template>

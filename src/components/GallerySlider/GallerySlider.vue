@@ -26,7 +26,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="gallery-slider">
+  <header class="gallery-slider">
     <Splide
       :has-track="false"
       :options="selectedOptions"
@@ -47,5 +47,5 @@ onMounted(async () => {
         </button>
       </div>
     </Splide>
-  </div>
+  </header>
 </template>

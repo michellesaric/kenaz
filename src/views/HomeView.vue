@@ -14,7 +14,7 @@ import HomeGallery from "../components/HomeGallery/HomeGallery.vue";
     <div class="background-center">
       <Banner />
       <GallerySlider />
-      <div class="view-main-content">
+      <main class="view-main-content">
         <div class="view-main-content__left">
           <NewsRowLayout title="News" borderColor="#299ec3" />
           <NewsRowLayout title="Sport" borderColor="#84c14f" />
@@ -36,7 +36,7 @@ import HomeGallery from "../components/HomeGallery/HomeGallery.vue";
           </div>
         </div>
         <SideBarContent />
-      </div>
+      </main>
       <Banner />
       <HomeGallery />
     </div>

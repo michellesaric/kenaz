@@ -46,7 +46,9 @@ const props = defineProps({
       <p class="news-article-by-category__text">
         {{ props.description }}
       </p>
-      <button class="news-article-by-category__button">Read article</button>
+      <button class="news-article-by-category__button">
+        <router-link to="/article">Read article</router-link>
+      </button>
     </div>
   </div>
 </template>

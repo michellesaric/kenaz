@@ -3,7 +3,7 @@ import Banner from "../Banner/Banner.vue";
 </script>
 
 <template>
-  <div class="side-bar-banner-container">
+  <section class="side-bar-banner-container">
     <Banner
       :bannerWidth="'128px'"
       :bannerHeight="'128px'"
@@ -14,5 +14,5 @@ import Banner from "../Banner/Banner.vue";
       :bannerHeight="'128px'"
       :bannerMargin="'0px'"
     />
-  </div>
+  </section>
 </template>

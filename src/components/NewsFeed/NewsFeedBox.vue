@@ -5,7 +5,9 @@
   >
     <div class="news-feed-layout__top">
       <h2 class="news-feed-layout__title">{{ title }}</h2>
-      <h4 class="news-feed-layout__link">See All</h4>
+      <router-link to="/category" class="news-feed-layout__link"
+        >See All</router-link
+      >
     </div>
     <slot></slot>
   </div>

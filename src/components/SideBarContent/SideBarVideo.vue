@@ -1,5 +1,5 @@
 <template>
-  <div class="side-bar-video">
+  <section class="side-bar-video">
     <h2 class="side-bar-video__title">Kenaz TV</h2>
     <div>
       <iframe
@@ -20,5 +20,5 @@
         Saturn
       </p>
     </div>
-  </div>
+  </section>
 </template>

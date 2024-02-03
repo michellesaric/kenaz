@@ -36,7 +36,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="home-gallery">
+  <section class="home-gallery">
     <Splide
       class="splide-home-gallery"
       ref="main"
@@ -94,5 +94,5 @@ onMounted(() => {
       :imgUrl="currentHomeGalleryImage"
       :changeImageSize="changeImageSize"
     />
-  </div>
+  </section>
 </template>

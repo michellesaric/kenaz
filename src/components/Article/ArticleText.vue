@@ -1,5 +1,5 @@
 <template>
-  <div class="article-text">
+  <article class="article-text">
     <div class="article-text__wrapper">
       <p class="article-text__text-upper-text">
         Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta
@@ -32,5 +32,5 @@
         src="../../assets/images/ArticleSocialMedia.png"
       />
     </div>
-  </div>
+  </article>
 </template>
