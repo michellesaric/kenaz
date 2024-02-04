@@ -2,13 +2,16 @@
 import { defineProps } from "vue";
 
 const props = defineProps({
-  id: Number,
+  id: String,
+  imageUrl: String,
   title: String,
   date: String,
-  author: String,
   comments: Number,
-  imgUrl: String,
   description: String,
+  author: String,
+  source: String,
+  sourceDescription: String,
+  content: String,
 });
 </script>
 
@@ -40,7 +43,7 @@ const props = defineProps({
   <div class="news-article-by-category__content">
     <div
       class="news-article-by-category__content-image"
-      :style="{ backgroundImage: 'url(' + props.imgUrl + ')' }"
+      :style="{ backgroundImage: 'url(' + props.imageUrl + ')' }"
     ></div>
     <div class="news-article-by-category__text-content">
       <p class="news-article-by-category__text">

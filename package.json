@@ -13,6 +13,7 @@
     "@splidejs/vue-splide": "^0.6.12",
     "axios": "^1.6.7",
     "eslint-plugin-vue": "^9.20.1",
+    "pinia": "^2.1.7",
     "uuid": "^9.0.1",
     "volar-service-vetur": "^0.0.17",
     "vue": "^3.3.11",

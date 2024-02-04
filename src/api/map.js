@@ -109,6 +109,7 @@ export async function mapNewsDataByCategoryAndPageNumber(category, pageNumber) {
       title: news.title,
       date: formatDate(news.publishedAt),
       comments: 5,
+      description: news.description,
       author: news.author,
       source: news.source.name,
       sourceDescription: news.source.description,

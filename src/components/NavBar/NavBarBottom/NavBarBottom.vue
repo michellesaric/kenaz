@@ -18,16 +18,22 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { categories } from "./navBarBottom";
+import { useCategoryStore } from "../../../stores/CategoryStore";
+import { categoryRename } from "../../../utils/categoryRename";
 
 export default {
   setup() {
+    const categoryStore = useCategoryStore();
     const categoriesData = ref(categories);
-    const activeCategory = ref("news");
+
+    const activeCategory = computed(() =>
+      categoryRename(categoryStore.category)
+    );
 
     const classClick = (category) => {
-      activeCategory.value = category;
+      categoryStore.updateCategory(categoryRename(category));
     };
 
     return {
