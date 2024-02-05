@@ -1,12 +1,20 @@
 <script setup>
 import LogoWhite from "../icons/LogoWhite.vue";
 import SearchIcon from "../icons/SearchIconSmall.vue";
+import { useCategoryStore } from "@/stores/CategoryStore";
+
+const categoryStore = useCategoryStore();
+
+const getLink = () => {
+  categoryStore.updateCategory("news");
+  return "/";
+};
 </script>
 
 <template>
   <div class="nav-top__wrapper">
     <div class="nav-top">
-      <router-link to="/" class="nav-top__logo">
+      <router-link :to="getLink()" class="nav-top__logo">
         <div class="nav-top__logo-icon">
           <LogoWhite />
         </div>

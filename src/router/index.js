@@ -1,14 +1,18 @@
+import { createRouter, createWebHistory } from "vue-router";
+import { useCategoryStore } from "@/stores/CategoryStore";
 import HomeView from "../views/HomeView.vue";
 import CategoryView from "../views/CategoryView.vue";
 import ArticleView from "../views/ArticleView.vue";
 import ErrorView from "../views/ErrorView.vue";
 
-import { createRouter, createWebHistory } from "vue-router";
-
 const routes = [
   { path: "/", component: HomeView },
   { path: "/category", component: CategoryView },
   { path: "/article", component: ArticleView },
+  {
+    path: "/:category",
+    component: CategoryView,
+  },
   {
     path: "/:pathMatch(.*)*",
     component: ErrorView,
@@ -22,6 +26,11 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
+  if (to.path === "/") {
+    const categoryStore = useCategoryStore();
+    categoryStore.resetCategory();
+  }
+
   window.scrollTo({ top: 0, behavior: "smooth" });
   next();
 });

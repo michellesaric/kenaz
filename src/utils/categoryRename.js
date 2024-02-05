@@ -1,4 +1,8 @@
 export const categoryRename = (categoryName) => {
+  if (categoryName === "") {
+    return "";
+  }
+
   const categoryMap = {
     news: "general",
     News: "general",

@@ -1,6 +1,6 @@
 <template>
   <div class="nav-bottom__wrapper">
-    <router-link to="/category" class="nav-bottom">
+    <router-link :to="getLink()" class="nav-bottom">
       <a
         v-for="category in categories"
         :key="category"
@@ -8,7 +8,7 @@
         :class="[
           'nav-bottom__category',
           category,
-          { active: activeCategory === category },
+          { active: categoryStore.activeCategory === category },
         ]"
       >
         {{ category }}
@@ -18,28 +18,39 @@
 </template>
 
 <script>
-import { ref, computed } from "vue";
+import { ref, watch } from "vue";
 import { categories } from "./navBarBottom";
 import { useCategoryStore } from "../../../stores/CategoryStore";
-import { categoryRename } from "../../../utils/categoryRename";
+import router from "@/router/index";
 
 export default {
   setup() {
     const categoryStore = useCategoryStore();
     const categoriesData = ref(categories);
 
-    const activeCategory = computed(() =>
-      categoryRename(categoryStore.category)
-    );
-
     const classClick = (category) => {
-      categoryStore.updateCategory(categoryRename(category));
+      categoryStore.updateCategory(category);
     };
+
+    const getLink = () => {
+      return `/${categoryStore.activeCategory}`;
+    };
+
+    const unwatch = watch(
+      () => categoryStore.activeCategory,
+      (newCategory, oldCategory) => {
+        if (newCategory !== oldCategory) {
+          router.push(`/${newCategory}`);
+        }
+      }
+    );
 
     return {
       categories: categoriesData,
-      activeCategory,
       classClick,
+      getLink,
+      categoryStore,
+      unwatch,
     };
   },
 };
