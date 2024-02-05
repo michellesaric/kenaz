@@ -7,8 +7,7 @@ import ErrorView from "../views/ErrorView.vue";
 
 const routes = [
   { path: "/", component: HomeView },
-  { path: "/category", component: CategoryView },
-  { path: "/article", component: ArticleView },
+  { path: "/article/:id", component: ArticleView },
   {
     path: "/:category",
     component: CategoryView,

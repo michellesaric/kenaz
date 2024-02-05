@@ -33,7 +33,7 @@ const props = defineProps({
       </div>
       <p class="splide__slide-title">{{ props.title }}</p>
       <button class="splide__slide-button">
-        <router-link to="/article">Read article</router-link>
+        <router-link :to="'/article/' + props.id">Read article</router-link>
       </button>
     </div>
   </div>

@@ -2,7 +2,7 @@
 import GallerySlide from "./GallerySlide.vue";
 import LeftArrowGray from "../icons/LeftArrowGray.vue";
 import RightArrowGray from "../icons/RightArrowGray.vue";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, provide } from "vue";
 import { mapNewsData } from "../../api/map";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
@@ -22,6 +22,7 @@ onMounted(async () => {
   } catch (error) {
     console.error("Error fetching news data:", error);
   }
+  provide("articles", galleryItems);
 });
 </script>
 
