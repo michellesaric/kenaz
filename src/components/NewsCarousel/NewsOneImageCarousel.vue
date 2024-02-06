@@ -1,12 +1,15 @@
 <script setup>
-import LeftArrowBrown from "../icons/LeftArrowBrown.vue";
-import RightArrowBrown from "../icons/RightArrowBrown.vue";
-import NewsCarouselBox from "./NewsCarouselBox.vue";
 import { ref, defineProps, onMounted } from "vue";
-import { mapNewsDataByCategory } from "@/api/map";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
 
+import LeftArrowBrown from "../icons/LeftArrowBrown.vue";
+import RightArrowBrown from "../icons/RightArrowBrown.vue";
+import NewsCarouselBox from "./NewsCarouselBox.vue";
+import { mapNewsDataByCategory } from "@/api/map";
+import { useCategoryStore } from "@/stores/CategoryStore";
+
+const categoryStore = useCategoryStore();
 const { title, borderColor } = defineProps(["title", "borderColor"]);
 
 const selectedOptions = {
@@ -26,6 +29,10 @@ onMounted(async () => {
     console.error("Error fetching news data:", error);
   }
 });
+
+const saveArticle = (newsItem) => {
+  categoryStore.updateNewsData(newsItem);
+};
 </script>
 
 <template>
@@ -38,7 +45,10 @@ onMounted(async () => {
       >
         <SplideTrack>
           <SplideSlide v-for="newsItem in news" :key="newsItem.id">
-            <router-link to="/article">
+            <router-link
+              :to="'/article' + newsItem.id"
+              @click="saveArticle(newsItem)"
+            >
               <div
                 class="news-carousel-one-image__image"
                 :style="{

@@ -1,12 +1,14 @@
 <template>
-  <section
-    class="banner"
-    :style="{
-      width: dynamicStyles.width,
-      height: dynamicStyles.height,
-      margin: dynamicStyles.margin,
-    }"
-  ></section>
+  <section class="banner">
+    <div
+      class="banner-image"
+      :style="{
+        width: dynamicStyles.width,
+        height: dynamicStyles.height,
+        margin: dynamicStyles.margin,
+      }"
+    ></div>
+  </section>
 </template>
 
 <script>

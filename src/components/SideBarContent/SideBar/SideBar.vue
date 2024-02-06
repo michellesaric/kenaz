@@ -1,8 +1,10 @@
 <script setup>
-import { mapNewsData } from "@/api/map";
 import { ref, onMounted } from "vue";
+import { mapNewsData } from "@/api/map";
 import SideBarItem from "./SideBarItem.vue";
+import { useCategoryStore } from "@/stores/CategoryStore";
 
+const categoryStore = useCategoryStore();
 const links = ["Popular", "Top Rated", "Comments"];
 const selectedLink = ref(links[0]);
 
@@ -20,6 +22,10 @@ onMounted(async () => {
     console.error("Error fetching news data:", error);
   }
 });
+
+const saveArticle = (newsItem) => {
+  categoryStore.updateNewsData(newsItem);
+};
 </script>
 
 <template>
@@ -36,8 +42,9 @@ onMounted(async () => {
     </div>
     <div class="side-bar__list">
       <router-link
-        to="/article"
+        :to="'/article' + sideBarItem.id"
         class="side-bar__item"
+        @click="saveArticle(sideBarItem)"
         v-for="sideBarItem in sideBarItems"
         :key="sideBarItem.id"
       >

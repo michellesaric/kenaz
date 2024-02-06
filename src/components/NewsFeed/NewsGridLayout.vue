@@ -2,7 +2,9 @@
 import { ref, onMounted, defineProps } from "vue";
 import NewsFeedBox from "./NewsFeedBox.vue";
 import { mapNewsDataByCategoryAndPageSize } from "@/api/map";
+import { useCategoryStore } from "@/stores/CategoryStore";
 
+const categoryStore = useCategoryStore();
 const props = defineProps(["title", "borderColor"]);
 const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
 
@@ -16,14 +18,19 @@ onMounted(async () => {
     console.error("Error fetching news data:", error);
   }
 });
+
+const saveArticle = (newsItem) => {
+  categoryStore.updateNewsData(newsItem);
+};
 </script>
 
 <template>
   <NewsFeedBox :title="title" :borderColor="borderColor">
     <div class="news-card-small">
       <router-link
-        to="/article"
+        :to="'/article' + newsItem.id"
         class="news-card-small__card"
+        @click="saveArticle(newsItem)"
         v-for="newsItem in news"
         :key="newsItem.id"
       >

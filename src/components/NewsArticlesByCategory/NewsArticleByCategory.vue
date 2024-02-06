@@ -1,18 +1,24 @@
 <script setup>
 import { defineProps } from "vue";
+import { useCategoryStore } from "@/stores/CategoryStore";
+
+const categoryStore = useCategoryStore();
 
 const props = defineProps({
   id: String,
   imageUrl: String,
   title: String,
+  description: String,
   date: String,
   comments: Number,
-  description: String,
   author: String,
   source: String,
-  sourceDescription: String,
   content: String,
 });
+
+const saveArticle = () => {
+  categoryStore.updateNewsData(props);
+};
 </script>
 
 <template>
@@ -50,7 +56,9 @@ const props = defineProps({
         {{ props.description }}
       </p>
       <button class="news-article-by-category__button">
-        <router-link to="/article">Read article</router-link>
+        <router-link :to="'/article/' + props.id" @click="saveArticle"
+          >Read article</router-link
+        >
       </button>
     </div>
   </div>

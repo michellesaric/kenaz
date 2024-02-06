@@ -1,17 +1,9 @@
 <script setup>
-import { ref, computed, onMounted, inject } from "vue";
-import { useRoute } from "vue-router";
+import { computed } from "vue";
+import { useCategoryStore } from "@/stores/CategoryStore";
 
-// const route = useRoute();
-// const articles = inject("articles", ref([]));
-
-// const articleId = computed(() => route.params.id);
-
-// const selectedArticle = computed(() => {
-//   return articles.value.find((article) => article.id === articleId.value);
-// });
-
-// console.log(articles);
+const categoryStore = useCategoryStore();
+const activeArticle = computed(() => categoryStore.currentlySavedNews);
 </script>
 
 <template>
@@ -19,12 +11,12 @@ import { useRoute } from "vue-router";
     <figure>
       <div
         class="article-header__image"
-       
+        :style="{ backgroundImage: 'url(' + activeArticle.imageUrl + ')' }"
       >
         <div class="article-header__text-content">
-          <time class="article-header__date">august, 26 2013</time>
+          <time class="article-header__date">{{ activeArticle.date }}</time>
           <figcaption class="article-header__title">
-            yayayayayayayaya
+            {{ activeArticle.title }}
           </figcaption>
         </div>
       </div>

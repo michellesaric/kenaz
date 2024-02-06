@@ -4,16 +4,15 @@
   .article-header__image {
     width: 940px;
     height: 588px;
-    background: url(src/assets/images/Slider1/SlideImage5.jpg);
     background-size: cover;
     position: relative;
 
     .article-header__text-content {
+      background: url(src/assets/images/ImageShadow.png);
       width: 100%;
       position: absolute;
       bottom: 0;
       padding: 94px 0px 34px 30px;
-      background: url(src/assets/images/ImageShadow.png);
 
       .article-header__date {
         @include VarelaRound($textSecondaryBlack, 12px, normal);
@@ -22,6 +21,8 @@
 
       .article-header__title {
         @include BitterBold($textSecondaryBlack, 44px, normal);
+        max-width: 500px;
+        @include TextCutter(2);
       }
     }
   }

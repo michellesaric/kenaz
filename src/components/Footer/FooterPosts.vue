@@ -1,9 +1,11 @@
 <script setup>
 import { ref, onMounted, defineProps } from "vue";
 import { mapNewsDataByCategoryAndPageSize } from "@/api/map";
+import { useCategoryStore } from "@/stores/CategoryStore";
 
 const props = defineProps(["postTitle"]);
 const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
+const categoryStore = useCategoryStore();
 
 const posts = ref([]);
 
@@ -15,13 +17,17 @@ onMounted(async () => {
     console.error("Error fetching news data:", error);
   }
 });
+
+const saveArticle = (post) => {
+  categoryStore.updateNewsData(post);
+};
 </script>
 
 <template>
   <section class="footer-posts">
     <h2 class="footer-posts__title">{{ props.postTitle }}</h2>
     <div class="footer-posts__list">
-      <router-link to="/article">
+      <article>
         <div class="footer-posts__post" v-for="post in posts" :key="post.id">
           <div>
             <div class="footer-posts__post-date-comment-wrapper">
@@ -30,7 +36,12 @@ onMounted(async () => {
                 {{ post.comments }}
               </h4>
             </div>
-            <p class="footer-posts__post-title">{{ post.title }}</p>
+            <router-link
+              :to="'/article/' + post.id"
+              @click="saveArticle(post)"
+              class="footer-posts__post-title"
+              >{{ post.title }}</router-link
+            >
           </div>
           <div
             class="footer-posts__post-image"
@@ -39,7 +50,7 @@ onMounted(async () => {
             }"
           ></div>
         </div>
-      </router-link>
+      </article>
     </div>
   </section>
 </template>

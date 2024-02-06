@@ -5,6 +5,7 @@ const props = defineProps({
   id: String,
   imageUrl: String,
   title: String,
+  description: String,
   date: String,
   comments: Number,
   author: String,

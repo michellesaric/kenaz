@@ -23,11 +23,11 @@ export async function mapNewsData() {
       id: newsId,
       imageUrl: news.urlToImage,
       title: news.title,
+      description: news.description,
       date: formatDate(news.publishedAt),
       comments: 5,
       author: news.author,
       source: news.source.name,
-      sourceDescription: news.source.description,
       content: news.content,
     };
   });
@@ -49,11 +49,11 @@ export async function mapNewsDataByCategory(category) {
       id: newsId,
       imageUrl: news.urlToImage,
       title: news.title,
+      description: news.description,
       date: formatDate(news.publishedAt),
       comments: 5,
       author: news.author,
       source: news.source.name,
-      sourceDescription: news.source.description,
       content: news.content,
     };
   });
@@ -78,11 +78,11 @@ export async function mapNewsDataByCategoryAndPageSize(category, pageSize) {
       id: newsId,
       imageUrl: news.urlToImage,
       title: news.title,
+      description: news.description,
       date: formatDate(news.publishedAt),
       comments: 5,
       author: news.author,
       source: news.source.name,
-      sourceDescription: news.source.description,
       content: news.content,
     };
   });
@@ -107,12 +107,12 @@ export async function mapNewsDataByCategoryAndPageNumber(category, pageNumber) {
       id: newsId,
       imageUrl: news.urlToImage,
       title: news.title,
+      description: news.description,
       date: formatDate(news.publishedAt),
       comments: 5,
       description: news.description,
       author: news.author,
       source: news.source.name,
-      sourceDescription: news.source.description,
       content: news.content,
     };
   });

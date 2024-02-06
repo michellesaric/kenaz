@@ -1,40 +1,21 @@
 <script setup>
-import { ref, onMounted, watch, computed } from "vue";
-import { mapNewsDataByCategoryAndPageNumber } from "@/api/map";
-import NewsArticleByCategory from "./NewsArticleByCategory.vue";
+import { ref, computed } from "vue";
 import { useCategoryStore } from "@/stores/CategoryStore";
 import { categoryRename } from "@/utils/categoryRename";
 import { toCamelCase } from "@/utils/toCamelCase";
 
 const paginationNumbers = ["1", "2", "3", "4", "5", "6", "7"];
-const activeNumber = ref(paginationNumbers[0]);
 
 const classClick = (number) => {
-  activeNumber.value = number;
+  categoryStore.updatePaginationNumber(number);
 };
 
 const categoryStore = useCategoryStore();
 const category = computed(() =>
-  toCamelCase(categoryRename(categoryStore.category))
+  toCamelCase(categoryRename(categoryStore.activeCategory))
 );
 
-const news = ref([]);
-
-const fetchData = async () => {
-  try {
-    const data = await mapNewsDataByCategoryAndPageNumber(
-      categoryStore.category,
-      activeNumber.value
-    );
-    news.value = data;
-  } catch (error) {
-    console.error("Error fetching news data:", error);
-  }
-};
-
-onMounted(fetchData);
-
-watch([category, activeNumber], fetchData);
+const news = ref(categoryStore.currentlyDisplayedNews);
 </script>
 
 <template>
@@ -56,7 +37,9 @@ watch([category, activeNumber], fetchData);
         @click="classClick(paginationNumber)"
         :class="[
           'news-articles-by-category__pagination-numbers',
-          { active: activeNumber === paginationNumber },
+          {
+            active: categoryStore.currentPaginationNumber === paginationNumber,
+          },
         ]"
       >
         {{ paginationNumber }}
