@@ -19,7 +19,7 @@ const selectedOptions = {
 };
 
 const news = ref([]);
-const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
+const noImageAvailable = "src/assets/images/HomeGallery/Image1.jpeg";
 
 onMounted(async () => {
   try {

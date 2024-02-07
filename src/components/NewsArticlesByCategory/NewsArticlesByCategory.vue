@@ -1,8 +1,18 @@
 <script setup>
-import { ref, computed } from "vue";
+import { computed, onBeforeMount } from "vue";
+import { useRoute } from "vue-router";
 import { useCategoryStore } from "@/stores/CategoryStore";
 import { toCamelCase } from "@/utils/toCamelCase";
 import NewsArticleByCategory from "./NewsArticleByCategory.vue";
+
+const route = useRoute();
+
+onBeforeMount(() => {
+  const currentCategoryFromUrl = route.params.category;
+  if (currentCategoryFromUrl != categoryStore.activeCategory) {
+    categoryStore.updateCategory(currentCategoryFromUrl);
+  }
+});
 
 const paginationNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

@@ -6,7 +6,7 @@ import { useCategoryStore } from "@/stores/CategoryStore";
 
 const categoryStore = useCategoryStore();
 const props = defineProps(["title", "borderColor"]);
-const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
+const noImageAvailable = "src/assets/images/HomeGallery/Image1.jpeg";
 
 const news = ref([]);
 

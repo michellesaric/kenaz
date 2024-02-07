@@ -3,7 +3,6 @@ import { useCategoryStore } from "@/stores/CategoryStore";
 const categoryStore = useCategoryStore();
 
 const activeArticle = categoryStore.currentlySavedNews;
-console.log(activeArticle);
 </script>
 
 <template>

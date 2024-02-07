@@ -14,7 +14,7 @@ const props = defineProps({
   content: String,
 });
 
-const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
+const noImageAvailable = "src/assets/images/HomeGallery/Image1.jpeg";
 </script>
 
 <template>

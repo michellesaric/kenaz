@@ -4,7 +4,7 @@ import { mapNewsDataByCategoryAndPageSize } from "@/api/map";
 import { useCategoryStore } from "@/stores/CategoryStore";
 
 const props = defineProps(["postTitle"]);
-const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
+const noImageAvailable = "src/assets/images/HomeGallery/Image1.jpeg";
 const categoryStore = useCategoryStore();
 
 const posts = ref([]);

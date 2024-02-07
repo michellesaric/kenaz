@@ -28,7 +28,7 @@ const selectedOptions = {
 };
 
 const news = ref([]);
-const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
+const noImageAvailable = "src/assets/images/HomeGallery/Image1.jpeg";
 
 onMounted(async () => {
   try {
@@ -46,39 +46,41 @@ const saveArticle = (newsItem) => {
 
 <template>
   <NewsCarouselBox :title="title" :borderColor="borderColor">
-    <Splide
-      :has-track="false"
-      :options="selectedOptions"
-      aria-label="News Carousel"
-    >
-      <SplideTrack>
-        <SplideSlide v-for="newsItem in news" :key="newsItem.id">
-          <router-link
-            :to="'/article/' + newsItem.id"
-            @click="saveArticle(newsItem)"
-          >
-            <div
-              class="news-carousel-two-image__image"
-              :style="{
-                backgroundImage: `url(${
-                  newsItem.imageUrl || noImageAvailable
-                })`,
-              }"
-            ></div>
-            <h4 class="news-carousel-two-image__date">{{ newsItem.date }}</h4>
-            <p class="news-carousel-two-image__title">{{ newsItem.title }}</p>
-          </router-link>
-        </SplideSlide>
-      </SplideTrack>
+    <template v-if="news.length">
+      <Splide
+        :has-track="false"
+        :options="selectedOptions"
+        aria-label="News Carousel"
+      >
+        <SplideTrack>
+          <SplideSlide v-for="newsItem in news" :key="newsItem.id">
+            <router-link
+              :to="'/article/' + newsItem.id"
+              @click="saveArticle(newsItem)"
+            >
+              <div
+                class="news-carousel-two-image__image"
+                :style="{
+                  backgroundImage: `url(${
+                    newsItem.imageUrl || noImageAvailable
+                  })`,
+                }"
+              ></div>
+              <h4 class="news-carousel-two-image__date">{{ newsItem.date }}</h4>
+              <p class="news-carousel-two-image__title">{{ newsItem.title }}</p>
+            </router-link>
+          </SplideSlide>
+        </SplideTrack>
 
-      <div class="splide__arrows">
-        <button class="splide__arrow splide__arrow--prev">
-          <LeftArrowYellow />
-        </button>
-        <button class="splide__arrow splide__arrow--next">
-          <RightArrowYellow />
-        </button>
-      </div>
-    </Splide>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <LeftArrowYellow />
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <RightArrowYellow />
+          </button>
+        </div>
+      </Splide>
+    </template>
   </NewsCarouselBox>
 </template>
