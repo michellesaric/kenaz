@@ -50,7 +50,7 @@ export const useCommentsStore = defineStore("commentsStore", {
         (comment) => comment.id !== commentId
       );
     },
-    addReplyToComment(commentId, userName, reply) {
+    addReplyToComment(commentId, userName, email, reply) {
       const commentIndex = this.comments.findIndex(
         (comment) => comment.id === commentId
       );
@@ -59,6 +59,8 @@ export const useCommentsStore = defineStore("commentsStore", {
         const newReply = {
           id: this.comments[commentIndex].replies.length + 1,
           userName: userName,
+          email: email,
+          dateTime: formatDateAndTime(new Date()),
           reply: reply,
         };
 

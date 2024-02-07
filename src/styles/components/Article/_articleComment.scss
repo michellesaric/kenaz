@@ -31,6 +31,7 @@
       .article-comment__link {
         @include VarelaRound($backgroundPurple, 14px, normal);
         margin-right: 10px;
+        cursor: pointer;
       }
 
       .article-comment__delete-icon {

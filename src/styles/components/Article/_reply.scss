@@ -1,0 +1,43 @@
+.reply {
+  margin-top: 5px;
+  width: 100%;
+  border-top: 1px solid $secondaryGray;
+  padding: 10px 5px;
+  display: flex;
+
+  .reply__image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .reply__text-content {
+    width: 100%;
+    .reply__name-date-icon-wrapper {
+      @include FlexSpaceBetween;
+
+      .reply__name-date-wrapper {
+        display: flex;
+
+        .reply__name {
+          @include BitterRegular($backgroundPurple, 14px, 20px);
+          margin-right: 8px;
+        }
+
+        .reply__date {
+          @include Varela($textGray, 11px, 20px);
+        }
+      }
+
+      .reply__icon {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .reply__text {
+    @include Varela($textDarkGray, 12px, 20px);
+  }
+}

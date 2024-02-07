@@ -1,8 +1,12 @@
 <script setup>
 import { ref, defineProps } from "vue";
 import ReplyModal from "./ReplyModal.vue";
+import Reply from "./Reply.vue";
+import { useCommentsStore } from "@/stores/CommentsStore";
 
 let isReplyModalOpen = ref(false);
+const id = ref(null);
+const commentsStore = useCommentsStore();
 
 const props = defineProps({
   id: Number,
@@ -14,8 +18,13 @@ const props = defineProps({
   deleteComment: Function,
 });
 
-const openModal = () => {
-  isReplyModalOpen = !isReplyModalOpen;
+const toggleModal = (commentId) => {
+  isReplyModalOpen.value = !isReplyModalOpen.value;
+  id.value = commentId;
+};
+
+const deleteReply = (commentId, replyId) => {
+  commentsStore.deleteReplyToComment(commentId, replyId);
 };
 </script>
 
@@ -35,7 +44,9 @@ const openModal = () => {
         </h3>
       </div>
       <div class="article-comment__link-icon-wrapper">
-        <h4 class="article-comment__link" @click="openModal">Reply</h4>
+        <h4 class="article-comment__link" @click="toggleModal(props.id)">
+          Reply
+        </h4>
         <img
           src="../../../assets/images/ExitIcon.jpg"
           class="article-comment__delete-icon"
@@ -44,7 +55,20 @@ const openModal = () => {
       </div>
     </div>
     <p class="article-comment__text">{{ props.comment }}</p>
-    <div v-if="props.replies.length !== 0" v-for="reply in props.replies"></div>
-    <ReplyModal v-if="isReplyModalOpen" />
+    <div
+      v-if="props.replies.length !== 0"
+      v-for="reply in props.replies"
+      :key="reply.id"
+    >
+      <Reply
+        v-bind="reply"
+        :deleteReply="() => deleteReply(props.id, reply.id)"
+      />
+    </div>
+    <ReplyModal
+      v-if="isReplyModalOpen"
+      :commentId="id"
+      :toggleModal="toggleModal"
+    />
   </div>
 </template>

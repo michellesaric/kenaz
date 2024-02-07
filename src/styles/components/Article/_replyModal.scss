@@ -1,0 +1,53 @@
+.reply-modal {
+  border-top: 1px solid $secondaryGray;
+  padding: 15px 10px;
+
+  .reply-modal__title-wrapper {
+    @include FlexSpaceBetween;
+    margin-bottom: 10px;
+
+    .reply-modal__title {
+      @include BitterBold($textBlack, 14px, normal);
+    }
+
+    .reply-modal__icon {
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .reply-modal__form {
+    display: flex;
+    flex-direction: column;
+
+    .reply-modal__label {
+      @include VarelaRound($textBlue, 12px, normal);
+      margin-bottom: 5px;
+    }
+
+    .reply-modal__input {
+      outline: none;
+      padding: 7px 0px 7px 10px;
+      background-color: $backgroundLightGray;
+      width: 303px;
+      margin-bottom: 8px;
+      border: none;
+      @include VarelaRound($textGray, 12px, normal);
+    }
+
+    .reply-modal__submit {
+      background-color: $backgroundPurple;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      width: 80px;
+      @include VarelaRound($white, 12px, normal);
+    }
+
+    .error-message {
+      margin-top: 15px;
+      @include BitterBold($businessOrange, 12px, normal);
+    }
+  }
+}
