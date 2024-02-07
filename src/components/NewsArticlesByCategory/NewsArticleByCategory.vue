@@ -3,6 +3,7 @@ import { defineProps } from "vue";
 import { useCategoryStore } from "@/stores/CategoryStore";
 
 const categoryStore = useCategoryStore();
+const noImageAvailable = "src/assets/images/NoImageAvailable.jpg";
 
 const props = defineProps({
   id: String,
@@ -49,7 +50,9 @@ const saveArticle = () => {
   <div class="news-article-by-category__content">
     <div
       class="news-article-by-category__content-image"
-      :style="{ backgroundImage: 'url(' + props.imageUrl + ')' }"
+      :style="{
+        backgroundImage: `url(${props.imageUrl || noImageAvailable})`,
+      }"
     ></div>
     <div class="news-article-by-category__text-content">
       <p class="news-article-by-category__text">

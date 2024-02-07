@@ -46,7 +46,7 @@ const saveArticle = (newsItem) => {
         <SplideTrack>
           <SplideSlide v-for="newsItem in news" :key="newsItem.id">
             <router-link
-              :to="'/article' + newsItem.id"
+              :to="'/article/' + newsItem.id"
               @click="saveArticle(newsItem)"
             >
               <div

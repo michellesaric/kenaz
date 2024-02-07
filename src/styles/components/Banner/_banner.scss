@@ -1,10 +1,6 @@
 .banner {
-  width: 100%;
+  background: url(src/assets/images/SomeBanner.jpg);
+  background-size: cover;
+  background-position: center;
   @include FlexCenterColumn;
-
-  .banner-image {
-    background: url(src/assets/images/SomeBanner.jpg);
-    background-size: cover;
-    background-position: center;
-  }
 }

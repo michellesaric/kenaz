@@ -5,11 +5,8 @@
   >
     <div class="news-feed-layout__top">
       <h2 class="news-feed-layout__title">{{ title }}</h2>
-      <router-link
-        :to="getLink()"
-        class="news-feed-layout__link"
-        @click="changeCategory"
-        >See All</router-link
+      <router-link :to="getLink()" class="news-feed-layout__link"
+        ><a @click="changeCategory">See All</a></router-link
       >
     </div>
     <slot></slot>
@@ -17,7 +14,7 @@
 </template>
 
 <script>
-import { ref, defineComponent } from "vue";
+import { defineComponent } from "vue";
 import { useCategoryStore } from "@/stores/CategoryStore";
 
 export default defineComponent({

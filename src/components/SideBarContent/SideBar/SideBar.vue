@@ -1,14 +1,12 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { mapNewsDataByCategoryAndPageNumber } from "@/api/map";
-import Trigger from "./Trigger.vue";
+import { mapNewsData } from "@/api/map";
 import SideBarItem from "./SideBarItem.vue";
 import { useCategoryStore } from "@/stores/CategoryStore";
 
 const categoryStore = useCategoryStore();
 const links = ["Popular", "Top Rated", "Comments"];
 const selectedLink = ref(links[0]);
-let page = 1;
 
 const selectLink = (link) => {
   selectedLink.value = link;
@@ -16,11 +14,14 @@ const selectLink = (link) => {
 
 const sideBarItems = ref([]);
 
-const loadMore = async () => {
-  page += 1;
-  const data = await mapNewsDataByCategoryAndPageNumber("general", page);
-  sideBarItems.value = data;
-};
+onMounted(async () => {
+  try {
+    const data = await mapNewsData();
+    sideBarItems.value = data;
+  } catch (error) {
+    console.error("Error fetching news data:", error);
+  }
+});
 
 const saveArticle = (newsItem) => {
   categoryStore.updateNewsData(newsItem);
@@ -49,7 +50,6 @@ const saveArticle = (newsItem) => {
       >
         <SideBarItem v-bind="sideBarItem" />
       </router-link>
-      <Trigger @triggerIntersected="loadMore" />
     </div>
   </section>
 </template>

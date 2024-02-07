@@ -30,12 +30,9 @@ export default {
     const router = useRouter();
 
     const classClick = (category) => {
-      console.log(categoryStore.activeCategory);
       categoryStore.updateCategory(category);
       router.push(`/${category}`);
     };
-
-    console.log(categoryStore.activeCategory);
 
     const getLink = () => {
       return `/${categoryStore.activeCategory}`;

@@ -5,6 +5,7 @@
 }
 
 .article-comment__text-content {
+  width: 100%;
   .article-comment__name-date-link-wrapper {
     @include FlexSpaceBetween;
     align-items: flex-end;
@@ -23,8 +24,20 @@
         @include Varela($textGray, 11px, 20px);
       }
     }
-    .article-comment__link {
-      @include VarelaRound($backgroundPurple, 14px, normal);
+
+    .article-comment__link-icon-wrapper {
+      @include FlexCenterHorizontal;
+
+      .article-comment__link {
+        @include VarelaRound($backgroundPurple, 14px, normal);
+        margin-right: 10px;
+      }
+
+      .article-comment__delete-icon {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+      }
     }
   }
 

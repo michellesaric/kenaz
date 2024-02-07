@@ -59,6 +59,11 @@
       cursor: pointer;
       @include VarelaRound($white, 14px, normal);
     }
+
+    .error-message {
+      margin-top: 15px;
+      @include BitterBold($businessOrange, 16px, normal);
+    }
   }
 }
 

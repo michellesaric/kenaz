@@ -28,7 +28,7 @@ const saveArticle = (newsItem) => {
   <NewsFeedBox :title="title" :borderColor="borderColor">
     <div class="news-card-small">
       <router-link
-        :to="'/article' + newsItem.id"
+        :to="'/article/' + newsItem.id"
         class="news-card-small__card"
         @click="saveArticle(newsItem)"
         v-for="newsItem in news"

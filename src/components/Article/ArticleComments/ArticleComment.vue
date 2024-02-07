@@ -1,17 +1,29 @@
 <script setup>
-import { defineProps } from "vue";
+import { ref, defineProps } from "vue";
+import ReplyModal from "./ReplyModal.vue";
+
+let isReplyModalOpen = ref(false);
 
 const props = defineProps({
   id: Number,
-  imgUrl: String,
   userName: String,
+  email: String,
   dateTime: String,
   comment: String,
+  replies: Array,
+  deleteComment: Function,
 });
+
+const openModal = () => {
+  isReplyModalOpen = !isReplyModalOpen;
+};
 </script>
 
 <template>
-  <img class="article-comment__image" :src="props.imgUrl" />
+  <img
+    class="article-comment__image"
+    src="../../../assets/images/UserAvatar.png"
+  />
   <div class="article-comment__text-content">
     <div class="article-comment__name-date-link-wrapper">
       <div class="article-comment__name-date-wrapper">
@@ -22,8 +34,17 @@ const props = defineProps({
           {{ props.dateTime }}
         </h3>
       </div>
-      <h4 class="article-comment__link">Reply</h4>
+      <div class="article-comment__link-icon-wrapper">
+        <h4 class="article-comment__link" @click="openModal">Reply</h4>
+        <img
+          src="../../../assets/images/ExitIcon.jpg"
+          class="article-comment__delete-icon"
+          @click="deleteComment(props.id)"
+        />
+      </div>
     </div>
     <p class="article-comment__text">{{ props.comment }}</p>
+    <div v-if="props.replies.length !== 0" v-for="reply in props.replies"></div>
+    <ReplyModal v-if="isReplyModalOpen" />
   </div>
 </template>
